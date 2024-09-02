@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimédia em HTML</title>
+</head>
+
+<body>
+    <!-- <video src="multimedia/big_buck_bunny.mp4" controls autoplay poster="img/1927832.webp"></video> -->
+
+    <!-- containers versus codecs -->
+    <!-- container - 1 pista de vídeo, 1 ou mais pistas de áudio e metainformação/metadados/metadata -->
+    <!-- containers suportados pelos browser: mp4, ogg/ogv(open source), webm (Google) -->
+    <!-- codecs de vídeo: H.264, HEVC/H.265, VP8/VP9 (Google), Theora (open source), AV1 (AOMedia Video 1) -->
+    <!-- <video controls>
+        <source src="multimedia/big_buck_bunny.mp4" type="video/mp4">
+        </source>
+        <source src="multimedia/big_buck_bunny.webm" type="video/webm">
+        </source>
+        <source src="multimedia/big_buck_bunny.ogv" type="video/ogg">
+        </source>
+    </video> -->
+
+    <!-- ver HTML5 media players -->
+    <!-- 
+    exemplos: 
+    https://www.mediaelementjs.com/
+    https://videojs.com/
+    https://jwplayer.com/
+    -->
+
+    <video src="multimedia/big_buck_bunny.mp4" controls>
+        <track default kind="subtitles" srclang="en" label="English" src="multimedia/captions.vtt">
+        <track kind="subtitles" srclang="pt" label="Português" src="multimedia/captions.vtt">
+    </video>
+
+    <!-- Audio -->
+    <audio src="multimedia/audio.mp3" controls></audio>
+    <!-- codecs de audio: mp3 (MPEG-1 Layer 3), aac (Advanced Audio Coding), Ogg/Vorbis (open-source), FLAC, Opus (gratuito e open source), Wav (Waveform Audio File Format) -->
+
+    <!-- Link para um video do Youtube -->
+    <p><a href="https://www.youtube.com/watch?v=pvgTisKJw2M" target="_blank">Simone - O Amanhã (Áudio Oficial)</a></p>
+
+    <!-- Embedded content -->
+    <!-- Youtube videos -->
+    <!-- inline frame -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4KFXMtQJhmM?si=g5pl2kcrHFUjGasf"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <iframe src="https://www.publico.pt" width="560" height="315"></iframe>
+
+    <!-- alternativa -->
+    <object data="https://www.publico.pt" width="560" height="315"></object>
+    <!-- <embed></embed> - utilizado para carregar animações/vídeos Flash -->
+    <object data="ex1.html" width="560" height="315"></object>
+
+    <!-- Google Maps -->
+    <p><a href="https://maps.app.goo.gl/jbPymjQJy4MKkPVFA" target="_blank">Casa da Simone</a></p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16744.51902294649!2d-8.410484889979116!3d40.19390733392432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2spt!4v1722458012388!5m2!1sen!2spt"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- marquee - deprecated -->
+    <marquee>Pedro Remoaldo</marquee>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/*
+
+Unidades
+
+/* 
+evitem usar pixeis
+em tem fator multiplicar em cada herança
+use rem se quiser o valor de um item herdado sem o fator multiplicador
+*/
+
+absolutas:
+    px - pixeis
+    pt - points (impressora/papel)
+    cm - centimetros
+    mm - milimetros
+    in - inches/polegadas
+    pc - picas
+
+Relativas (sempre ralativas ao elemento parente):    
+    % - percentage
+    em
+    rem - root em
+    ex - x-height
+    vw - viewport width (100vw = 100% da largura)
+    vh - viewport height (100vh = 100% da altura)
+    vmin
+    vmax
+    ch - character height
+
+*/
+
+#container {
+    font-size: 2em;
+}
+#exemplo {
+    width: 500px;
+    /* 1em = 100% = 16px */
+    /* 2em = 200% = 32px */
+    /* font-size: 2em; */
+
+    /* 2rem = 16px * 2 = 32px*/
+    font-size: 2rem;
+}
+
+/*
+
+Cores
+
+Named colors:
+    16 cores originais - fuchsia
+    actualmente temos nomes para 147 cores
+        khaki
+        chartreuse
+Hexadecimal colors:
+    #RRGGBB ou #rrbbgg
+    0-9abcdef
+    #23a5ef
+    #000 / #000000- black
+    #fff - white
+    #ccc - lightgrey
+    #f00 - red
+    #ff0 - yellow
+    #RGB ou #RGB
+    #33ee66 é igual a #3e6
+
+RGB colors:
+    0-255
+    rgb(255, 255, 0) - yellow
+    rgb(23, 56, 234)
+    rgb(50%, 25%, 67%)
+
+hsl():
+    hue, saturation, lightness
+    hsl(150deg 30% 60%);
+
+Transparência/opacidade:
+    cor - transparent
+    propriedade opacity
+    opacity: 0; - transparente
+    opacity: 1; - opaco
+
+    transparencia varia entre 0 e 1 e, incrementos de 0.05
+    rgba(23, 56, 234, 0.55) - com transparencia
+    hsla(150deg 30% 60% 0.55)
+    #RRGGBBAA ou #rrbbggaa
+    #23efc634
+*/
+
+
+#exemplo {
+    /* color: blueviolet; */
+    /* color: chartreuse; */
+    /* color: #23a5ef; */
+    /* color: #ff0; */
+    /* color: rgb(35, 255, 0); */
+    /* color: rgb(50%, 25%, 67%); */
+    /* color: hsl(150deg 30% 60%); */
+    /* color: transparent; */
+    /* opacity: 0; */
+    /* color: rgba(23, 56, 234, 0.55); */
+    color: #23efc6;
+    color: #23efc634;
+
+}

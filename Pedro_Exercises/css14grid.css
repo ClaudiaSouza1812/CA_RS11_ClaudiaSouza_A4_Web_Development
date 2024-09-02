@@ -1,0 +1,35 @@
+#layoutComGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "a b b"
+        "a c d"
+        "e e e";
+}
+
+#layoutComGrid>section {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    padding: 30px;
+}
+
+#layoutComGrid>section:nth-child(1) {
+    grid-area: a;
+}
+
+#layoutComGrid>section:nth-child(2) {
+    grid-area: b;
+}
+
+#layoutComGrid>section:nth-child(3) {
+    grid-area: c;
+}
+
+#layoutComGrid>section:nth-child(4) {
+    grid-area: d;
+}
+
+#layoutComGrid>section:nth-child(5) {
+    grid-area: e;
+}

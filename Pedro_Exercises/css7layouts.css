@@ -1,0 +1,50 @@
+/* universal selector */
+/* * {
+    box-sizing: border-box;
+} */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#layoutComFloats {
+    overflow: hidden;
+}
+
+#layoutComFloats>section {
+    border: 1px solid #000;
+    padding: 20px;
+    float: left;
+    /* width: 33.33%; */
+    width: calc(100%/3);
+    box-sizing: border-box;
+    height: 200px;
+}
+
+#layoutComInlineBlock {
+    font-size: 0;
+}
+
+#layoutComInlineBlock>section {
+    border: 1px solid #000;
+    padding: 20px;
+    display: inline-block;
+    width: calc(100%/3);
+    box-sizing: border-box;
+    font-size: initial;
+    vertical-align: top;
+}
+
+#layoutComTabelas {
+    display: table;
+}
+
+#layoutComTabelas>section {
+    display: table-cell;
+    border: 1px solid #000;
+    padding: 20px;
+    width: calc(100%/3);
+    /* vertical-align: middle; */
+}

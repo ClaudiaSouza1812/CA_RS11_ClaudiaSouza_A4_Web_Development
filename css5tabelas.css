@@ -1,0 +1,50 @@
+.tabelaDados {
+    /* border-spacing: 0; */
+    border-collapse: collapse;
+    /* box-shadow: x-offset y-offset blur color */
+    box-shadow: 3px 3px 5px black;
+}
+
+.tabelaDados, 
+.tabelaDados th, 
+.tabelaDados td {
+    border: 1px solid #000;
+}
+
+.tabelaDados th, 
+.tabelaDados td {
+    padding: 20px;
+}
+
+.tabelaDados>caption {
+    caption-side: bottom;
+    margin-top: 10px;
+}
+
+.tabelaDados thead tr{
+    background-color: black;
+    color: white;
+}
+
+.tabelaDados tfoot tr {
+    background-color: gray;
+    color: white;
+}
+
+.tabelaDados tbody tr:nth-child(even) {
+    background-color: darkgray;
+}
+
+.tabelaDados tbody tr:hover {
+    background-color: darkgray;
+    color: white;
+    cursor: pointer;
+}
+
+.tabelaDados tbody td {
+    transition:  all 1s;
+}
+
+.tabelaDados tbody tr:hover {
+    font-size:  3em;
+}

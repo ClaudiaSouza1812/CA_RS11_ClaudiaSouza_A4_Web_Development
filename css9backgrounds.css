@@ -1,0 +1,50 @@
+body {
+    background-color: azure;
+}
+
+#background1 {
+    background-image: url(img/landescape_01.jpg);
+    background-repeat: no-repeat;
+    /* background-size: 100%;  */
+    border: 1px solid #000;
+    background-position: right center;
+    /* background-size: 50%;
+    background-size: contain; */
+    background-size: cover;
+    height: 600px;
+}
+
+#background2 {
+    background-image: url(img/landescape_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    background-attachment: fixed;
+}
+
+#sectionScroll {
+    background-image: url(img/landescape_01.jpg);
+    background-size: cover;
+    height: 200px;
+    overflow: auto;
+    background-attachment: local;
+}
+
+#gradient1 {
+    background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); 
+    height: 300px;
+
+}
+
+#pattern1 {
+    background:
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    height: 300px;
+}

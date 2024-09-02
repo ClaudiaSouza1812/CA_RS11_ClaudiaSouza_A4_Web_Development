@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML semântico</title>
+</head>
+
+<body>
+    <h1>Elementos de texto semânticos</h1>
+    <!-- <b> - bold/negrito - deprecated -->
+    <!-- <strong> - realce de 1º nível - a maior parte das vezes é renderizado como bold -->
+    <p>Lorem ipsum dolor sit amet <strong>consectetur adipisicing elit</strong>. Dicta libero, dolores culpa iusto
+        cumque excepturi optio
+        eius laborum nihil quod ullam, eum reprehenderit laboriosam. Architecto fugit veritatis hic mollitia? Quod.</p>
+    <!-- <i> - itálico - deprecated -->
+    <!-- <em> - realce de 2º nível - a maior parte das vezes é renderizado como itálico -->
+    <p>Similique dolorem at, in nam <em>laudantium accusantium eveniet</em> odit pariatur debitis optio laborum fugit
+        esse
+        facilis eos ratione doloribus sint nesciunt omnis tempore rem repellat inventore! Nihil quas facilis ex!</p>
+    <!-- <u> - underline/sublinhado - deprecated -->
+    <!-- <ins> - realce de 3º nível - a maior parte das vezes é renderizado como sublinhado - é utilizado primariamente para indicar texto inserido -->
+    <p>Pariatur numquam, culpa ea quaerat, praesentium sequi, rem nostrum non distinctio adipisci facere cumque quidem
+        incidunt natus accusantium <ins>nemo nulla perspiciatis</ins> impedit in. Impedit dolor perferendis, voluptatum
+        consequatur
+        est numquam.</p>
+    <!-- <s> - strikethrough/riscado - deprecated-->
+    <!-- <del> - utilizado primariamente para indicar texto removido -->
+    <p>Lorem ipsum dolor sit amet <del>consectetur adipisicing elit</del>. Eum nobis nostrum doloribus, laudantium neque
+        natus a,
+        voluptatibus laboriosam quasi optio pariatur possimus. Quo esse maxime blanditiis voluptates consectetur?
+        Distinctio, quaerat.</p>
+    <!-- <mark> - marcar texto como relevante -->
+    <p>Exercitationem eligendi, <mark>laudantium obcaecati aliquid</mark> sed nam dolorum, eos delectus quidem
+        asperiores cupiditate
+        dignissimos qui veniam nesciunt, repellat maiores atque doloribus ratione voluptatem? Consequatur sit
+        necessitatibus laborum fuga saepe. Totam.</p>
+
+    <!-- sub - subscript - subscrito -->
+    <p>Símbolo químico da água H<sub>2</sub>O</p>
+    <!-- sup - superscript - expoente ou índice ou sobrescrito -->
+    <p>Símbolo químico do oxigénio O<sup>2</sup></p>
+
+    <p>&euro;&hearts;&spades;&#9748;&#x2614;&#128663;</p>
+    <p>&atilde;&iacute;&agrave;</p>
+    <p>&copy; 2024 Pedro Remoaldo</p>
+    <p>© 2024 Pedro Remoaldo</p>
+    <p>&#9776;</p>
+
+    <!-- &nbsp; - non-breaking space -->
+    <p>Lorem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipsum dolor sit, amet consectetur adipisicing elit.
+        Architecto illo rerum obcaecati odio maiores ducimus
+
+
+        beatae rem eaque error aperiam omnis reiciendis, aliquam, vitae nisi doloremque, quam odit molestiae ullam!</p>
+
+    <!-- <pre> - Preformatted Text -->
+    <!-- efeito colateral - o tipo de letra muda para Courier, Courier New ou Consolas, e o texto não quebra (não fica justificado) -->
+    <pre>Lorem ipsum dolor,
+         sit amet       consectetur adipisicing elit. Repellendus dolores ipsam, ullam vel laborum adipisci.                Voluptatem assumenda alias,
+         
+         
+         aliquid voluptates deserunt eius, ab quibusdam, eveniet explicabo consectetur veniam esse. Aliquid.
+    </pre>
+
+    <!-- computer stuff -->
+    <p>Exemplo de código JavaScript:</p>
+    <code>
+        <pre>
+            let nome="Pedro Remoaldo";
+            console.log(nome);
+        </pre>
+    </code>
+    <p>Carregue em <kbd>Ctrl+C</kbd> para copiar o texto.</p>
+
+    <!-- mathematical stuff -->
+    <p>O resultado do cálculo é <samp>25</samp>.</p>
+    <!-- o elemento <var> mostra o texto em itálico -->
+    <p>Teoria da relatividade do Einstein: <var>E</var>=<var>m</var><var>c</var><sup>2</sup></p>
+
+    <!-- literature stuff -->
+    <!-- o elemento <cite> mostra o texto em itálico -->
+    <p lang="fr">A citação mais famosa do <cite>Hamlet</cite> do Shakespeare é <q>To be or not to be</q>.</p>
+    <p>Diálogo no Hamlet:</p>
+    <blockquote cite="https://www.watermill.org.uk/uploads/Hamlet%20-%20Dialogue%20and%20Subtext.pdf">
+        <pre>
+        CLAUDIUS
+        But now, my cousin Hamlet, and my son,--
+        HAMLET
+        [Aside] A little more than kin, and less than kind.
+        CLAUDIUS
+        How is it that the clouds still hang on you?
+        HAMLET
+        Not so, my lord; I am too much i' the sun.
+        </pre>
+    </blockquote>
+
+    <p>Organizações internacionais:</p>
+    <ul>
+        <li><abbr title="United Nations" title="United Nations">UN</abbr></li>
+    </ul>
+    <address>
+        Cegid<br>
+        Edifício PRIMAVERA<br>
+        Rua Dr. Egídio Guimarães, nº 74<br>
+        Lamaçães<br>
+        4719-006 Braga
+    </address>
+
+</body>
+
+</html>

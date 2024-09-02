@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Folhas de estilo</title>
+    <!-- <style type="text/css"> -->
+    <style>
+        /* 
+        CSS rule
+        selector {
+            propriedade1: valor;
+            propriedade2: valor;
+            ...
+        }
+        */
+        /* o selector "p" formata todos os parágrafos existentes na página */
+        /* tag selector */
+        p {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        /* class selector */
+        .realce {
+            font-weight: bold;
+        }
+
+        /* id selector */
+        #destaque {
+            color: blue;
+            letter-spacing: 0.5em;
+            word-spacing: 2em;
+            /* por omissão, o tipo de letra utilizado é o Times New Roman (Times no Mac) */
+            /* font stack */
+            font-family: Arial, Helvetica, sans-serif;
+            /* 
+            Tipos de typefaces:
+                serif - Times, Times New Roman
+                    font-family: 'Times New Roman', Times, serif
+                sans-serif - Arial, Helvetiva
+                    font-family: Arial, Helvetica, sans-serif;
+                monospace - Courier, Courier New, Consolas
+                    font-family: 'Courier New', Courier, monospace;
+                cursive - Comic Sans
+                    font-family: 'Comic Sans', cursive;
+                fantasy - Impact
+                    font-family: Impact, fantasy;
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Cascading Style Sheets</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus libero perspiciatis quos illo nulla quisquam
+        possimus eveniet omnis exercitationem nobis quod itaque eum, dicta nisi facilis obcaecati aperiam delectus
+        aspernatur?</p>
+    <p class="realce">Quo, in assumenda! Perferendis assumenda obcaecati dolore doloribus maiores praesentium hic
+        quaerat repellat et
+        sequi, voluptates voluptatum aut rerum voluptatem. Dolore, quibusdam expedita excepturi dolorum laboriosam
+        mollitia magnam nulla est?</p>
+    <p class="realce">Fugit ea cumque ducimus, magni natus illo! Reiciendis, suscipit a. Voluptas ipsam facere aut
+        dolor, temporibus
+        debitis rerum libero dolorem, at laudantium officiis et iste eius vero in perspiciatis odio!</p>
+    <p id="destaque">Delectus iusto ea perspiciatis nulla cupiditate praesentium voluptatibus esse exercitationem
+        repellat, non est,
+        temporibus assumenda expedita eos totam reprehenderit corrupti? At qui cumque error sequi nemo? Quis et in ea?
+    </p>
+</body>
+
+</html>

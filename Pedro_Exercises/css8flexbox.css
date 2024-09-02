@@ -1,0 +1,35 @@
+body {
+    background-color: lightgrey;
+    ;
+}
+
+#layoutComFlexbox {
+    display: flex;
+}
+
+#layoutComFlexbox>section {
+    border: 1px solid #000;
+    padding: 20px;
+    /* width: calc(100%/3); */
+    flex: 1;
+}
+
+#layoutComFlexbox2 {
+    display: flex;
+    column-gap: 20px;
+}
+
+#layoutComFlexbox2>section {
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+#layoutComFlexbox2>section:first-child,
+#layoutComFlexbox2>section:last-child {
+    flex: 1;
+}
+
+#layoutComFlexbox2>section:nth-child(2) {
+    flex: 2;
+}

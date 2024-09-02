@@ -1,0 +1,99 @@
+/*
+CSS box model
+
+Propriedades:
+
+width - largura
+height - largura
+padding - espaço entre conteúdo do eemento e a border
+border - moldura á volta do elemento html
+margin - espaço entre os elementos e outros elementos adjacentes
+
+outline - border para além da border (á volta da border)
+overflow - define o que acontece com conteudo que estravasa limites do elemento
+
+*/
+
+p {
+    width: 500px;
+    /* height: 25px; */
+    border: 1px solid #000;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+    border: 3px double #000;
+    /* padding: 10px; */
+    /* 10px - top/bottom e 20px - left/right */
+    /* padding: 10px 20px; */
+    /* padding-left: 20px; */
+    /* padding: top right botton left */
+    padding: 5px 10px 20px 30px;
+    margin: 0px;
+    display: inline-block;
+}
+
+#especial {
+    height: 75px;
+    overflow: scroll;
+}
+
+a {
+    /* por omissão um link the display inline */
+    /* display: block; */
+    /* color: yellow; */
+}
+
+/* :link - pseudo-classe */
+
+
+a:link {
+    /* color: green; */
+    /* text-decoration: none; */
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    /* text-decoration: underline;
+    font-weight: bold; */
+}
+
+a:active {
+    /* outline: 3px solid #f0f;
+    font-size: 3rem; */
+}
+/* utilizado sobreudo por razões de acessibilidade */
+a:focus {
+    /* border: 1px dotted #000;
+    background-color: yellow */
+}
+/* child selector */
+#topMenu>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+/* espaço - descendant selector */
+#topMenu li {
+    display: inline;
+}
+
+/* alternativa */
+/* #topMenu>ul>li {} */
+
+#topMenu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+}
+
+#topMenu a:hover {
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,29 @@
+#layoutComGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* column-gap: 30px; */
+}
+
+#layoutComGrid>section {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    padding: 30px;
+}
+
+#layoutComGrid>section:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#layoutComGrid>section:nth-child(2) {
+    background-color: cyan;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+#layoutComGrid>section:nth-child(5) {
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: span 3;
+}

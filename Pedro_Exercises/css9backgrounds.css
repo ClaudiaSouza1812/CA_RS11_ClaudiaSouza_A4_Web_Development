@@ -1,0 +1,54 @@
+body {
+    background-color: cyan;
+}
+
+#background1 {
+    background-color: red;
+    /* background-image: url('img/1927832.webp'); */
+    background-image: url('img/landscape1.webp');
+    background-repeat: no-repeat;
+    /* background-position: right bottom; */
+    background-position: right center;
+    /* background-size: 50%; */
+    /* background-size: contain; */
+    background-size: cover;
+    border: 1px solid #000;
+    height: 600px;
+}
+
+#background2 {
+    background-image: url('img/landscape1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    background-attachment: fixed;
+}
+
+#sectionScroll {
+    background-image: url('img/landscape1.webp');
+    background-size: cover;
+    height: 200px;
+    overflow: auto;
+    background-attachment: local;
+}
+
+#gradiente1 {
+    /* background: linear-gradient(to bottom, #1e5799 0%, #7db9e8 100%); */
+    background: linear-gradient(135deg, #1e5799 0%, #7db9e8 100%);
+    /* background: linear-gradient(to bottom, yellow 0%, blue 50%, red 100%); */
+    height: 300px;
+}
+
+/*  criar um padrão - pattern */
+#gradiente2 {
+    background-color: silver;
+    background-image:
+        radial-gradient(circle at 100% 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+        radial-gradient(circle at 0 150%, silver 24%, white 24%, white 28%, silver 28%, silver 36%, white 36%, white 40%, transparent 40%, transparent),
+        radial-gradient(circle at 50% 100%, white 10%, silver 10%, silver 23%, white 23%, white 30%, silver 30%, silver 43%, white 43%, white 50%, silver 50%, silver 63%, white 63%, white 71%, transparent 71%, transparent),
+        radial-gradient(circle at 100% 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent),
+        radial-gradient(circle at 0 50%, white 5%, silver 5%, silver 15%, white 15%, white 20%, silver 20%, silver 29%, white 29%, white 34%, silver 34%, silver 44%, white 44%, white 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+    /* background-repeat: no-repeat; */
+    height: 300px;
+}

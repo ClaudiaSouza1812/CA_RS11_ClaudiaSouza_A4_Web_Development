@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimédia</title>
+</head>
+
+<body>
+
+    <!-- video -->
+    <!--<video src="multimedia/big_buck_bunny.mp4" controls autoplay poster="img/wolf.webp"></video>-->
+
+    <!-- containers versus codecs -->
+    <!-- container - 1 pista de video, 1 ou mais pistas de audio e metainformação/metadados/metadata -->
+    <!-- containers suportados pelos browser: mp4, ogg/ogv(open source), webm (Google) -->
+    <!-- video codecs - H.264, HEVC/H.265, Vp8/VP9 (Google), Theora (open source), AV1 (AOMedia Video 1) -->
+
+    <video width="600" height="315" src="multimedia/big_buck_bunny.mp4" controls poster="img/wolf.webp" type="video/mp4">
+        <track default kind="subtitles" srclang="en" label="English" src="multimedia/captions.vtt">
+        <track />
+        <track default kind="subtitles" srclang="pt-BR" label="Português" src="multimedia/captions_pt-BR.vtt">
+        <track />
+    </video>
+    <video width="600" height="315" src="multimedia/big_buck_bunny.webm" controls type="video/webm"></video>
+
+    <!-- ver html5 media players -->
+    <!-- 
+    exemplos:
+    https://www.mediaelementjs.com
+    https://videojs.com
+    https://jwplayer.com -->
+
+    <!-- video link -->
+    <!-- Embeded content -->
+    <!-- Youtube videos -->
+    <!-- inline frame -->
+    <p><a href="https://www.youtube.com/embed/-4Sbufu80kU?si=-M5EycgRejJiClUY" target="_blank">Simone - Pequenino Cão
+            (Clipe Oficial)</a></p>
+    <iframe width="600" height="315" src="https://www.youtube.com/embed/-4Sbufu80kU?si=-M5EycgRejJiClUY"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <iframe src="https://www.publico.pt" width="600" height="315"></iframe>
+
+    <!-- Google maps -->
+
+    <p><a href="https://www.google.com/maps" target="_blank">Site Google Maps</a></p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d396911.502611027!2d-9.1411938!3d38.9954378!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2spt!4v1722458128535!5m2!1spt-PT!2spt"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="315"></iframe>
+
+
+
+
+
+    <!-- audio -->
+    <audio src="multimedia/audio.mp3" controls></audio>
+
+    <!-- audio codecs - mp3 (MPEG-1 layer 3), aac (Advanced Audio Coding), Ogg/Vorbis (open-source), FLAC, Opus (gratuito, open source), Wav (Waveform audio file format) -->
+
+</body>
+
+</html>

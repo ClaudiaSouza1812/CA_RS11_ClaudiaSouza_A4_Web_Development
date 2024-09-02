@@ -1,0 +1,61 @@
+.tabelaDados {
+    /* border-spacing: 0; */
+    border-collapse: collapse;
+    /* box-shadow: x-offset y-offset blur color */
+    box-shadow: 3px 3px 5px #000;
+}
+
+.tabelaDados,
+.tabelaDados th,
+.tabelaDados td {
+    border: 1px solid #000;
+}
+
+/* .tabelaDados {
+    border: 1px solid #000;
+}
+.tabelaDados th {
+    border: 1px solid #000;
+}
+.tabelaDados td {
+    border: 1px solid #000;
+} */
+
+.tabelaDados th,
+.tabelaDados td {
+    padding: 20px;
+}
+
+.tabelaDados>caption {
+    caption-side: bottom;
+    margin-top: 10px;
+}
+
+.tabelaDados thead tr {
+    background-color: black;
+    color: white;
+}
+
+.tabelaDados tfoot tr {
+    background-color: #666;
+    color: white;
+}
+
+/* .linhaRealce { */
+.tabelaDados tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+.tabelaDados tbody tr:hover {
+    background-color: #999;
+    color: white;
+    cursor: pointer;
+}
+
+/* .tabelaDados tbody td {
+    transition: all 1s;
+}
+
+.tabelaDados tbody td:hover {
+    font-size: 3em;
+} */

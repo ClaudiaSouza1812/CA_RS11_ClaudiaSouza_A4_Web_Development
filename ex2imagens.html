@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 2</title>
+</head>
+
+<body>
+    <!-- Images -->
+    <!--  
+    imagens bitmap
+        GIF
+            Graphics Interlaced Format
+            Paleta de cores - 256 cores
+            Tem animação - GIFs animados
+            Tem uma cor de transparencia
+            Tem compressão lossless (não pere qualidade)
+            Use cases - graficos de barras, logotipos
+        JPEG
+            Joint Photographers Expert Group
+            Paleta de cores - 16 milhões de cores (24 bits)
+                RGB - 256 cores Red / 256 cores Green / 256 cores Blue
+            Não tem animação
+            Não tem cor de transparência
+            Tem compressão lossy (perde qualidade)
+            Use cases - fotografias
+        PNG
+            Portable Network Graphics
+            Paleta de cores - 16 milhões de cores (24 bits)
+            Tem animação - APNG
+            Tem 256 cores de transparencia
+            Tem compressão lossless (não pere qualidade)
+            Use cases - utilizar para tudo
+                excepto para algumas fotografias - depende do espaço ocupado pelos ficheiros
+        Alternativas mais modernas
+            JPEG 2000
+            JPEG XL
+            WebP - Google
+            AVIF
+
+    imagens vetoriais
+        Usam formulas matemáticas
+        SVG
+            Scalar Vector Graphics
+            Paleta de cores - 16 milhões de cores (24 bits)
+            Tem animação - APNG
+            Tem transparencia
+            Human-readable
+            Use cases - logotipos, grafico de barras
+
+
+    -->
+    <svg class="masthead__branding__logo" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 56 59"></svg>
+
+    <!-- alt - alternate text - acessibility attribute - This attribute defines an alternative text description of the image.-->
+    <!-- alt is optional, can be left blank or not even exist if it is a decorative picture -->
+    <!-- longdec - deprecated - more detailed description of an image -->
+
+    <figure>
+        <img src="img/wolf.webp" width="1000" alt="wolf picture">
+        <figcaption>Foto 1 - Foto de um lobo</figcaption>
+    </figure>
+    <img src="img/wolf.webp" width="1000" alt="wolf picture">
+
+    <img src="img/arrow01.png">
+
+    <!-- data url -->
+     <!-- have the image type  (internet media type)-->
+     <!-- base64 = encoding -->
+
+     <img src="data:image/png;base64,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" alt="">
+
+
+
+
+</body>
+
+</html>

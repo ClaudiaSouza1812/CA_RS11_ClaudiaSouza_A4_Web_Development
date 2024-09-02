@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Folhas de estilo</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet"> -->
+    <style>
+        @font-face {
+            font-family: "Roboto Thin";
+            src: local("Roboto") url(fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+            font-weight: 100;
+            font-style: normal;
+        }
+        /* 
+        CSS rule:
+        selector {
+            propriedade1: valor;
+            propriedade2: valor;
+            ...
+        }
+        */
+        /* o seletor "p" formata todos os parágrafos existentes na pagina */
+        /* tag selector */
+        p {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        /* class selector */
+        .realce {
+            font-weight: bold;
+        }
+
+        /* id selector */
+        #destaque {
+            color: blue;
+            letter-spacing: 0.5em;
+            word-spacing: 2em;
+            /* by omition, the font type is Times New Roman (Times no Mac)*/
+            /* font stack */
+            /*font-family: Arial, Helvetica, sans-serif;*/
+            /*font-family: "Roboto", sans-serif;*/
+            font-weight: 100;
+            font-style: normal;
+
+            /*
+            Types of typefaces:
+            serif - Times, Times New Roman
+                font-family: 'Times New Roman', Times, serif;
+            sans-serif - Arial, Helvetica, sans-serif
+                font-family: Arial, Helvetica, sans-serif;
+            monospace - Courier New, Courier, consolas
+                font-family: 'Courier New', Courier, monospace;
+            cursive - Comic Sans
+                font-family: 'Comic Sans', cursive;
+            fantasy - Impact
+                font-family: Impact, fantasy;
+            */
+            font-family: "Roboto Thin", sans-serif;
+            /*
+            fonts file formats:
+            TTF - TrueType
+            OTF - OpenType
+            WOFF/WOFF2 - Web Open Font Format - Especifico para www, usar esta!
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS - Cascading Style Sheets</h1>
+    <!-- texts are renderized in 16px by default -->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, veniam, omnis eaque libero vero iusto ducimus
+        rem porro aut eligendi natus sed praesentium odio necessitatibus. Pariatur dolorum nulla ipsum blanditiis.</p>
+    <p class="realce">Laborum sit, tempora voluptas eveniet nesciunt corporis fugit laboriosam molestiae dignissimos?
+        Minus voluptatem odio hic laborum officiis, beatae magni magnam dolorem minima omnis labore repellendus culpa
+        quis dignissimos natus fuga.</p>
+    <p>Omnis et corrupti ex beatae amet dolorum fugit iste! Distinctio, adipisci fugit? Assumenda iusto possimus, odio
+        quis beatae distinctio placeat molestias ipsam repellendus quae a, illo ducimus quibusdam ullam dolores?</p>
+    <p id="destaque">Possimus tempore saepe dolorum, ad dicta quo voluptatem quam? Dolore sequi, cupiditate soluta
+        tempore fugiat aspernatur fugit. Magni velit neque fugiat, perspiciatis facilis ducimus, nulla ipsum quibusdam,
+        provident quo ipsam.</p>
+</body>
+
+</html>
