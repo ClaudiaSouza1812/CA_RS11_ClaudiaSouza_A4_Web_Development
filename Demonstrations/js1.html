@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Exemplo de JavaScript</title>
+</head>
+<body>
+    <!-- NUNCA UTILIZAR ISSO!!! -->
+    <p onclick="javascript:alert('Clicou')">Qualquer Coisa</p>
+
+    <!-- Utilizar o script tag para incluir JavaScript -->
+    <!-- Always put the script before the </body> -->
+    <script>
+        // assignment operator
+        var name = "Claudia Souza";
+        let city = "São Paulo";
+        city = "Porto";
+        city = 1234;
+        // console.log is used tipicaly for debbuging
+        console.log(city);
+        //constant
+        const year = 2024;
+        // ano = 2025; // Error: Assignment to constant variable
+        const PI = 3.1415;
+
+        // rule to attribute names to variables and constants
+        /*
+            - cannot start with simbols except $ and _. Ex: $nome ou _nome;
+            - we can only use letters (maiusculas and minisculas) and numbers beside $ and _;
+            - cannot start with numbers, ex: 3doors;
+            - the names are case sensitive - Total total and TOTAL are three different variables;
+            - the variables numbers of characters are limitless;
+            - dont use reserved keywords, ex: if, while, var, let, prompt;
+            - avoid using accented letters;
+        */
+        /*
+            Guidelines:
+            - descripting names - mnemonic names;
+            - avoid using single letter names (except in loops);
+            - use camel case or snack notation, ex: totalPrice or total_price;
+            - do not use long names;
+
+        */
+
+        // string
+        let country01 = "USA"; // doble quoted string
+        let country02 = 'Brazil'; // apostrophe - single quoted string
+
+        // concatenated strings
+        let message01 = "O" + name + " lives in " + country01 + ".";
+
+        let message02 = "O ".concat(name, " lives in ", country02, ".");
+
+        // string interpolation - template strings
+        // ` tick accent;
+        
+        let message03 = `O ${name} lives in ${country01}.`;
+        // sring methods - dot notation
+        console.log(name.toUpperCase()); // CLAUDIA SOUZA
+        console.log(name.toLowerCase()); // claudia souza
+        console.log(name.charAt(0)); // C;
+        // a string is an array-like, we can access an element using the array syntax [0] and we can use the length property, but we cant array methods
+        console.log(name[0]); // C;
+
+        // property length (readonly) - size of a string
+        console.log(name.length); 
+
+        /*
+            = assignment operator - atribution;
+            == comparison operator - equality operator - compares values (not type), ex: "2" == 2 (true);
+            === strict equality operator - equality operator - compares values and type, ex: "2" === 2 (false);
+        */
+
+        // flow control instructions
+        if (country01 === "Brazil") {
+            console.log("Brazil is a country");
+        } else {
+            console.log("Brazil is not a country");
+        }
+
+        // another comparison operators: >, <=, <, >=, != (not equal), !== (stricty not equal)
+        if (country01 === "Brazil") {
+            console.log("Good music");
+        } else if (country01 === "USA") {
+            console.log("Rock music");
+        } else if (country01 == "India") {
+            console.log("Hindi music");
+        } else {
+            console.log("Unknown music");
+        }
+
+        switch (country02) {
+            case "USA":
+                console.log("Rock music");
+                break;
+            case "Brazil":
+                console.log("Good music");
+                break;
+            case "India":
+                console.log("Hindi music");
+                break;
+            default:
+                console.log("Unknown music");
+                break;
+        }
+
+        // ternary operator
+        let test = 10;
+        let result = test > 20 ? "Bigger" : "Smaller";
+        console.log(result);
+
+        // same as above
+        let result02; // undefined value
+        console.log(result02);
+        if (test > 20) {
+            result02 = "Bigger";
+        } else {
+            result02 = "Smaller";
+        }   
+        console.log(result02);
+
+        // implicity data types
+        let age = 30; // number
+        let isStudent = true; // boolean
+        let name03 = "Claudia"; // string
+        let city03 = null; // null - no value
+        let country03; // undefined - no value
+
+        // typeof operator - get the type of a variable
+        console.log(typeof age); // number
+        console.log(typeof isStudent); // boolean
+        console.log(typeof name03); // string
+        console.log(typeof city03); // object - null
+        console.log(typeof country03); // undefined
+
+        // arrays
+        let fruits = ["apple", "banana", "orange"];
+        console.log(fruits); // [ 'apple', 'banana', 'orange' ]
+        console.log(fruits[0]); // apple
+        console.log(fruits.length); // 3
+
+        // loops
+        // for
+        // forEach
+        // while
+        // do-while
+
+        for (let i = 0; i <= 10; i++) {
+            if (i % 2 == 0) {
+                console.log(i);
+            }
+            
+        }
+
+        // show only the even numbers between 1 and 10
+        // % rest of the integers division
+
+        for (let i = 2; i <= 10; i + 2) {
+            console.log(i);
+        }
+        
+        while ()
+
+    </script>
+</body>
+</html>
