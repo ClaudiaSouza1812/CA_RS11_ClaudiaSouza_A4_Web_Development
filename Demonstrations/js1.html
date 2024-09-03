@@ -147,20 +147,80 @@
         // do-while
 
         for (let i = 0; i <= 10; i++) {
-            if (i % 2 == 0) {
-                console.log(i);
-            }
-            
+            console.log(i);
         }
 
         // show only the even numbers between 1 and 10
         // % rest of the integers division
 
-        for (let i = 2; i <= 10; i + 2) {
+        for (let i = 0; i <= 10; i++) {
+            if (i % 2 == 0) {
+                console.log(i);
+            }
+        }
+
+        // i++ <=> i+=1 <=> i=i+1
+        for (let i = 2; i <= 10; i += 2) {
             console.log(i);
         }
         
-        while ()
+        let i = 2;
+        while (i <= 10) {
+            console.log(i);
+            i += 2;
+        }
+
+        let j = 2;
+        do {
+            console.log(j);
+            j += 2;
+        } while (j <= 10)
+
+        let k = 3;
+        k++;
+        console.log(k); // 4
+        ++k;
+        console.log(k); // 5
+        // k++;
+        // let l = k;
+        let l = k++;
+        console.log(l); // 5
+        console.log(k); // 6
+        // ver tabela de precedências de operadores
+
+        let m = ++k;
+        console.log(m); // 7
+        console.log(k); // 7
+
+        // mostrar os caracteres da variável "empresa", um por cada linha
+        let empresa = "Mercadona";
+        for (let i = 0; i < empresa.length; i++) {
+            // console.log(empresa[i]);
+            console.log(empresa.charAt(i));
+        }
+
+        for (let caracter of empresa) {
+            console.log(caracter);
+        }
+
+        // mostrar os caracteres da variável "empresa", um por cada linha, por ordem inversa
+
+        for (let i = empresa.length - 1; i >= 0; i--) {
+            console.log(empresa.charAt(i));
+        }
+        
+        // inverter o valor da variável empresa
+
+        let invertedWord = [empresa.length - 1];
+
+        for (let leftIndex = 0, rightIndex = empresa.length - 1; leftIndex <= rightIndex; leftIndex++, rightIndex--) {
+            invertedWord[leftIndex] = empresa[rightIndex];
+            invertedWord[rightIndex] = empresa[leftIndex];
+        }
+        empresa = invertedWord.join("");
+        console.log(empresa);
+        // resultado = anodacreM
+
 
     </script>
 </body>
