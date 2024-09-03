@@ -208,20 +208,31 @@
         for (let i = empresa.length - 1; i >= 0; i--) {
             console.log(empresa.charAt(i));
         }
-        
+
         // inverter o valor da variável empresa
 
+        // My version
+        let wordLength = empresa.length - 1;
         let invertedWord = [empresa.length - 1];
 
-        for (let leftIndex = 0, rightIndex = empresa.length - 1; leftIndex <= rightIndex; leftIndex++, rightIndex--) {
+        for (let leftIndex = 0, rightIndex = wordLength; leftIndex <= rightIndex; leftIndex++, rightIndex--) {
             invertedWord[leftIndex] = empresa[rightIndex];
             invertedWord[rightIndex] = empresa[leftIndex];
         }
-        empresa = invertedWord.join("");
-        console.log(empresa);
+        console.log(invertedWord.join(""));
+
+        // Pedro's first version
+        let inversalWord = "";
+        for (let i = empresa.length - 1; i >= 0; i--) {
+            inversalWord += empresa[i];
+        }
+        
+        console.log(inversalWord);
+
+        // Pedro's second version
+        console.log(empresa.split("").reverse().join());
+
         // resultado = anodacreM
-
-
     </script>
 </body>
 </html>

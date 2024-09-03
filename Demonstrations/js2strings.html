@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=<1.0>">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let empresa = "Mercadona";
+
+        // Pedro's first version
+        let inversalWord = "";
+        for (let i = empresa.length - 1; i >= 0; i--) {
+            inversalWord += empresa[i];
+        }
+        console.log(inversalWord);
+        
+        // Pedro's second version
+        console.log(empresa.split("").reverse().join());
+
+        // resultado = anodacreM
+
+        // extract characters of a string
+        // extract only one character
+        // extract first character
+        // let firstChar = empresa.charAt(0);
+        // let firstChar = empresa[0];
+        // let firstChar = empresa.at(0);
+        // let firstChar = empresa.substr(0,1); // Deprecated - this feature is not longer recommended
+        // let firstChar = empresa.substring(0, 1)
+
+
+        // let firstChar = empresa.charAt(-1); // ""
+        // let firstChar = empresa.charAt(30); // ""
+        // let firstChar = empresa[-1]; // undefined
+        // let firstChar = empresa[30]; // undefined
+        // let lastChar = empresa.at(-1); // "a"
+        // let nextToLastChar = empresa.at(-2); // "n"
+        // let firstChar = empresa.at(30); // undefined
+        // let lastChar = empresa.charAt(empresa.length - 1);
+
+
+         let nome = "Pedro Remoaldo";
+         let ultimoNome = "";
+         let pos = nome.length - 1;
+         while (nome.at(pos) !== " " && pos >= 0) {
+             ultimoNome = nome.at(pos) + ultimoNome;
+             pos--;
+         }
+         console.log(ultimoNome); // Remoaldo
+ 
+         let ultimoNome2 = "";
+         for (let pos2 = nome.length - 1; pos2 >= 0; pos2--) {
+             if (nome.at(pos2) === " ") {
+                 break;
+             }
+             ultimoNome2 = nome.at(pos2) + ultimoNome2;
+         }
+         console.log(ultimoNome2); // Remoaldo
+ 
+         let ultimoNome3 = "";
+         for (let pos2 = nome.length - 1; nome.at(pos2) !== " " && pos2 >= 0; pos2--) {
+             ultimoNome3 = nome.at(pos2) + ultimoNome3;
+         }
+         console.log(ultimoNome3); // Remoaldo
+
+         let spacePosition = name.lastIndexOf(" ");
+         let ultimoNome4 = name.slice(spacePosition + 1);
+
+         let ultimoNome5 = name.slice(name.lastIndexOf(" ") + 1);
+
+         // determine if a name contains a specific character
+
+         let characterPosition01 = nome.indexOf("e");
+         console.log(characterPosition01); // 1
+         let characterPosition02 = nome.indexOf("i");
+
+         let newName = "";
+
+         for (let pos = 0; pos < nome.length; pos++) {
+            if (nome[pos] === "e") {
+                newName += "i";
+            } else {
+                newName += nome[pos];
+            }
+         }
+        
+         console.log(newName);
+
+         newName += (nome.at(pos) === "e" ? "i" : nome.at(pos)); 
+
+         console.log(newName);
+
+    </script>
+    
+</body>
+</html>

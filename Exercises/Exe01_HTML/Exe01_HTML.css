@@ -1,0 +1,13 @@
+section {
+    border-bottom: 2px solid darkgray;
+}
+
+a {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: cornflowerblue;
+}
