@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro exemplo de JavaScript</title>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <!-- NUNCA UTILIZAR O SEGUINTE!!!! -->
+    <p onclick="javascript:alert('Clicou')">Qualquer coisa</p>
+    <script>
+        // assignment operator
+        var nome = "Pedro Remoaldo";
+        let cidade = "Ermesinde";
+        cidade = "Porto";
+        cidade = 1234;
+        // console.log é utilizado tipicamente para debugging
+        console.log(cidade);
+
+        // constante
+        const ano = 2024;
+        // ano = 2025; // Error: Assignment to constant variable.
+        const PI = 3.1415;
+
+        // regras para atribuir nomes a variáveis e constantes (e a todos os identifiers, como functions e classes)
+        /*
+            - não pode começar nem usar símbolos excepto $ e _. Ex: $nome ou _nome
+            - só podemos utilizar letras (maiúsculas e minúsculas) e algarimos (além do $ e do _)
+            - não pode começar por um algarismo. O seguinte nome não é válido: 3portas
+            - os nomes são case-sensitive - Total, total e TOTAL são três variáveis diferentes
+            - não há limite ao número de caracteres do nome de uma variável
+            - não utilizar reserved keywords (palavras reservadas - if, while, var, let, prompt)
+            let if =123; // erro
+            - evitar a utilização de caracteres acentuados (á,õ,í) e ç
+
+        */
+        /*
+            Guidelines:
+            - nomes descritivos - nomes mnemónicos
+            - evitem nomes com apenas uma letra (excepto em ciclos)
+            - utilizar camel notation (totalArtigosComprados) ou snake notation (total_artigos_comprados)
+            - não utilizar nomes demasiado longos
+
+        */
+
+        let pais = "Portugal";
+
+        // instruções de controlo do fluxo do programa
+        /*
+        = - assignment operator - operador de atribuição
+        == - comparison operator - equality operator - compara valores - ("2" == 2) - true
+        === - comparison operator - strictly equality operator - compara valores e tipos de dados - ("2" === 2) - false
+        */
+        if (pais === "Portugal") {
+            console.log("Vive em Portugal");
+        } else {
+            console.log("Não vive em Portugal");
+        }
+        // outros operadores de comparação - >, <=, <, <=, != (not equal), !== (strictly not equal)
+
+        if (pais === "Portugal") {
+            console.log("Boa comida");
+        } else if (pais === "Brasil") {
+            console.log("Bom samba");
+        } else if (pais === "India") {
+            console.log("Comida com especiarias");
+        } else {
+            console.log("País desconhecido");
+        }
+
+        switch (pais) {
+            case "Portugal":
+                console.log("Boa comida");
+                break;
+            case "Brasil":
+                console.log("Bom samba");
+                break;
+            case "India":
+                console.log("Comida com especiarias");
+                break;
+            default:
+                console.log("País desconhecido");
+        }
+
+        // ternary operator - operador ternário
+        let teste = 10;
+        let resultado = (teste > 20) ? 'Maior' : 'Menor';
+        // let resultado = teste > 20 ? 'Maior' : 'Menor';
+        console.log(resultado);
+
+        // idêntico a:
+        let resultado2;
+        console.log(resultado2); // undefined
+        if (teste > 20) {
+            resultado2 = "Maior";
+        } else {
+            resultado2 = "Menor";
+        }
+        console.log(resultado2);
+
+        // tipos de dados implícito
+        let idade = 25;
+        console.log(typeof idade); // number
+
+        // ciclos / loops
+        // for
+        // forEach
+        // do while
+        // while
+
+        for (let i = 0; i <= 10; i++) {
+            console.log(i);
+        }
+        // mostrar apenas os números pares entre 1 e 10
+        // % - resto da divisão de inteiros
+        for (let i = 2; i <= 10; i++) {
+            if (i % 2 === 0) {
+                console.log(i);
+            }
+        }
+        // i++ <=> i+=1 <=> i=i+1
+        for (let i = 2; i <= 10; i += 2) {
+            console.log(i);
+        }
+
+        let i = 2;
+        while (i <= 10) {
+            console.log(i);
+            i += 2;
+        }
+
+        let j = 2;
+        do {
+            console.log(j);
+            j += 2;
+        } while (j <= 10)
+
+        let k = 3;
+        k++;
+        console.log(k); // 4
+        ++k;
+        console.log(k); // 5
+        // k++;
+        // let l = k;
+        let l = k++;
+        console.log(l); // 5
+        console.log(k); // 6
+
+        let m = ++k;
+        console.log(m); // 7
+        console.log(k); // 7
+
+
+
+    </script>
+</body>
+
+</html>

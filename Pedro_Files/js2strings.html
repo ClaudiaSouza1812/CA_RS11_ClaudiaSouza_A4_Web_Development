@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings em JavaScript</title>
+</head>
+
+<body>
+    <!-- <script type="text/javascript"> -->
+    <!-- <script type="application/ecmascript"> -->
+    <script>
+        let nome = "Pedro Remoaldo";
+
+        // strings
+        let pais1 = "Portugal";
+        let pais2 = 'Portugal'; // apóstrofos - single quotes
+
+        // concatenar
+        // + - operador de concatenação
+        let mensagem = "O " + nome + " mora em " + pais1 + ".";
+        console.log(mensagem);
+
+        let mensagem1 = "O ".concat(nome, " mora em ", pais1, ".");
+        console.log(mensagem1);
+
+        // string interpolation - template strings
+        // ` - backtick - acento grave
+        let mensagem2 = `O ${nome} 
+        mora em 
+        ${pais1}.`;
+        console.log(mensagem2);
+
+        // string methods - dot notation
+        console.log(nome.toUpperCase()); // PEDRO REMOALDO
+        console.log(nome.toLowerCase()); // pedro remoaldo
+        // extrair um determinado caracter/string
+        console.log(nome.charAt(0)); // P
+        // uma string é um array-like - posso aceder a um elemento utilizando a sintaxe de arrays [0] e posso utilizar a propriedade length, mas não posso utilizar métodos de arrays
+        console.log(nome[0]); // P
+
+        // propriedade length (readonly) - tamanho de uma string
+        console.log(nome.length); // 14
+
+        // mostrar os caracteres da variável "empresa", um por cada linha
+        let empresa = "Mercadona";
+        for (let i = 0; i < empresa.length; i++) {
+            // console.log(empresa[i]);
+            console.log(empresa.charAt(i));
+        }
+
+        for (let caracter of empresa) {
+            console.log(caracter);
+        }
+
+        // mostrar os caracteres da variável "empresa", um por cada linha, por ordem inversa
+
+        for (let i = empresa.length - 1; i >= 0; i--) {
+            console.log(empresa.charAt(i));
+        }
+
+        // inverter o valor da variável empresa
+        // resultado = anodacreM
+
+        // let invertedWord = [empresa.length - 1];
+
+        // for (let leftIndex = 0, rightIndex = empresa.length - 1; leftIndex <= rightIndex; leftIndex++, rightIndex--) {
+        //     invertedWord[leftIndex] = empresa[rightIndex];
+        //     invertedWord[rightIndex] = empresa[leftIndex];
+        // }
+        // empresa = invertedWord.join("");
+
+        let invertedWord = ""; // empty string
+        // for (let i = empresa.length - 1; i >= 0; i--) {
+        //     invertedWord += empresa.charAt(i);
+        // }
+        for (let pos = 0; pos < empresa.length; pos++) {
+            invertedWord = empresa.charAt(pos) + invertedWord;
+        }
+        console.log(invertedWord);
+
+        console.log(empresa.split("").reverse().join(""));
+
+        // extrair caracteres de uma string
+        // extrair apenas um caracter
+        // extrair o primeiro caracter
+        // let firstChar = empresa.charAt(0);
+        // let firstChar = empresa[0];
+        // let firstChar = empresa.at(0);
+        // let firstChar = empresa.substr(0, 1); // Deprecated - This feature is no longer recommended
+        // let firstChar = empresa.substring(0, 1);
+        // let firstChar = empresa.slice(0, 1);
+
+        // let firstChar = empresa.charAt(-1); // ""
+        // let firstChar = empresa.charAt(30); // ""
+        // let firstChar = empresa[-1]; // undefined
+        // let firstChar = empresa[30]; // undefined
+        // let lastChar = empresa.at(-1); // "a"
+        // let nextToLastChar = empresa.at(-2); // "n"
+        // let firstChar = empresa.at(30); // undefined
+        // let lastChar = empresa.charAt(empresa.length - 1);
+
+        // console.log(firstChar);
+
+        // let nome = "Pedro Remoaldo";
+        
+        let ultimoNome = "";
+        let pos = nome.length - 1;
+        while (nome.at(pos) !== " " && pos >= 0) {
+            ultimoNome = nome.at(pos) + ultimoNome;
+            pos--;
+        }
+        console.log(ultimoNome); // Remoaldo
+
+        let ultimoNome2 = "";
+        for (let pos2 = nome.length - 1; pos2 >= 0; pos2--) {
+            if (nome.at(pos2) === " ") {
+                break;
+            }
+            ultimoNome2 = nome.at(pos2) + ultimoNome2;
+        }
+        console.log(ultimoNome2); // Remoaldo
+
+        let ultimoNome3 = "";
+        for (let pos2 = nome.length - 1; nome.at(pos2) !== " " && pos2 >= 0; pos2--) {
+            ultimoNome3 = nome.at(pos2) + ultimoNome3;
+        }
+        console.log(ultimoNome3); // Remoaldo
+
+        // let posEspaco = nome.lastIndexOf(" ");
+        // let ultimoNome4 = nome.slice(posEspaco + 1);
+
+        let ultimoNome4 = nome.slice(nome.lastIndexOf(" ") + 1);
+
+        console.log(ultimoNome4);
+
+        // determinar se um nome possui um caracter (ou caracteres) específico
+        let posE = nome.indexOf("e");
+        console.log(posE); // 1
+        let posI = nome.indexOf("i");
+        console.log(posI); // -1 
+        let posDro = nome.indexOf("dro");
+        console.log(posDro); // 2
+
+        let incluiE2 = nome.includes("e");
+        console.log(incluiE2); // true
+        let incluiI2 = nome.includes("i"); // false
+        console.log(incluiI2); // false
+        let incluiDro = nome.includes("dro");
+        console.log(incluiDro); // true
+
+        console.log(nome.startsWith("P")); // true
+        console.log(nome.at(0) === "P"); // true
+        console.log(nome.at(0) === "p"); // false
+        // para apanhar minúsculas e maiúsculas
+        console.log(nome.at(0).toLowerCase() === "p"); // true
+        console.log(nome.toLowerCase().at(0) === "p"); // true
+        console.log(nome.startsWith("E")); // false
+
+        console.log(nome.endsWith("o")); // true
+        console.log(nome.at(nome.length - 1) === "o"); // true
+
+        console.log(nome.search("e")); // 1
+
+        console.log(nome.split("").find(char => char.toUpperCase() === "R")); // r
+
+        // expressões regulares - regular expressions / regex
+        // validar um código postal
+        let cp = "1100-345";
+        // 4 algarismos seguidos de um hifen (-) seguidos de 3 algarismos
+        // let re = /[0123456789]/;
+        // let re = /[0-9][0-9][0-9][0-9]/;
+        /*
+        ^ - início de string
+        $ - fim de string
+        [] - caracteres que têm de existir
+        {} - número de ocorrências do(s) caracter(es) anteriores
+        */
+        let re = /^[0-9]{4}\-[0-9]{3}$/;
+        console.log(re.test(cp)); // true
+
+        // Só permitir letras e espaços numa string ou num campo de um formulário
+        // /^[a-zA-Z ]$/
+        // /^[a-zA-Z]|[à-ü]|[À-Ü]$/
+        // /^[a-zA-Z\u00C0-\u017F]$/
+
+        // validar matrículas portuguesas
+        // /^(([A-Z]{2}-\d{2}-(\d{2}|[A-Z]{2}))|(\d{2}-(\d{2}-[A-Z]{2}|[A-Z]{2}-\d{2})))$/
+
+        // \ - Escape character - tira o significado especial do caracter que vem a seguir
+        // let frase = "No Hamlet de Shakespeare, o príncipe diz "To be or not to be"";
+        // let frase = "No Hamlet de Shakespeare, o príncipe diz 'To be or not to be'";
+        let frase = "No Hamlet de Shakespeare, o príncipe diz \"To be or not to be\"";
+
+        console.log(frase);
+
+        // substituir todos os caracteres "e", na variável "nome", por caracteres "i"
+
+        let result = "";
+        for (let pos = 0; pos < nome.length; pos++) {
+            // if (nome.at(pos) === "e") {
+            //     result += "i";
+            // } else {
+            //     result += nome.at(pos);
+            // }
+            result += (nome.at(pos) === "e") ? "i" : nome.at(pos);
+        }
+        console.log(result);
+
+        // replaceAll - ES2021
+        console.log(nome.replaceAll("e", "i")); // Pidro Rimoaldo
+        console.log(nome.replace(/r/ig, "t")); // Pedto timoaldo
+        // g - global match
+        // i - case insensitive
+
+    </script>
+</body>
+
+</html>

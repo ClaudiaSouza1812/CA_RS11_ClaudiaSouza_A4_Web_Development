@@ -6,10 +6,92 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- <script type="text/javascript"> -->
+    <!-- <script type="application/ecmascript"> -->
     <script>
+        // assignment operator
+        var name = "Claudia Souza";
+        let city = "São Paulo";
+        city = "Porto";
+        city = 1234;
+        // console.log is used tipicaly for debbuging
+        console.log(city);
+        //constant
+        const year = 2024;
+        // ano = 2025; // Error: Assignment to constant variable
+        const PI = 3.1415;
 
+        // rule to attribute names to variables and constants
+        /*
+            - cannot start with simbols except $ and _. Ex: $nome ou _nome;
+            - we can only use letters (maiusculas and minisculas) and numbers beside $ and _;
+            - cannot start with numbers, ex: 3doors;
+            - the names are case sensitive - Total total and TOTAL are three different variables;
+            - the variables numbers of characters are limitless;
+            - dont use reserved keywords, ex: if, while, var, let, prompt;
+            - avoid using accented letters;
+        */
+        /*
+            Guidelines:
+            - descripting names - mnemonic names;
+            - avoid using single letter names (except in loops);
+            - use camel case or snack notation, ex: totalPrice or total_price;
+            - do not use long names;
+
+        */
+
+        // string
+        let country01 = "USA"; // doble quoted string
+        let country02 = 'Brazil'; // apostrophe - single quoted string
+
+        // concatenated strings
+        let message01 = "O" + name + " lives in " + country01 + ".";
+
+        let message02 = "O ".concat(name, " lives in ", country02, ".");
+
+        // string interpolation - template strings
+        // ` tick accent;
+        
+        let message03 = `O ${name} lives in ${country01}.`;
+        // sring methods - dot notation
+        console.log(name.toUpperCase()); // CLAUDIA SOUZA
+        console.log(name.toLowerCase()); // claudia souza
+        console.log(name.charAt(0)); // C;
+        // a string is an array-like, we can access an element using the array syntax [0] and we can use the length property, but we cant array methods
+        console.log(name[0]); // C;
+
+        // property length (readonly) - size of a string
+        console.log(name.length); 
+
+
+        // mostrar os caracteres da variável "empresa", um por cada linha
         let empresa = "Mercadona";
+        for (let i = 0; i < empresa.length; i++) {
+            // console.log(empresa[i]);
+            console.log(empresa.charAt(i));
+        }
+
+        for (let caracter of empresa) {
+            console.log(caracter);
+        }
+
+        // mostrar os caracteres da variável "empresa", um por cada linha, por ordem inversa
+
+        for (let i = empresa.length - 1; i >= 0; i--) {
+            console.log(empresa.charAt(i));
+        }
+
+        // inverter o valor da variável empresa
+
+        // My version
+        let wordLength = empresa.length - 1;
+        let invertedWord = [empresa.length - 1];
+
+        for (let leftIndex = 0, rightIndex = wordLength; leftIndex <= rightIndex; leftIndex++, rightIndex--) {
+            invertedWord[leftIndex] = empresa[rightIndex];
+            invertedWord[rightIndex] = empresa[leftIndex];
+        }
+        console.log(invertedWord.join(""));
 
         // Pedro's first version
         let inversalWord = "";
@@ -17,21 +99,27 @@
             inversalWord += empresa[i];
         }
         console.log(inversalWord);
-        
+
         // Pedro's second version
+        for (let pos = 0; pos < empresa.length; pos++) {
+            invertedWord = empresa.charAt(pos) + invertedWord;
+        }
+        console.log(invertedWord);
+
+        // Pedro's third version
         console.log(empresa.split("").reverse().join());
 
         // resultado = anodacreM
 
-        // extract characters of a string
-        // extract only one character
-        // extract first character
+        // extrair caracteres de uma string
+        // extrair apenas um caracter
+        // extrair o primeiro caracter
         // let firstChar = empresa.charAt(0);
         // let firstChar = empresa[0];
         // let firstChar = empresa.at(0);
-        // let firstChar = empresa.substr(0,1); // Deprecated - this feature is not longer recommended
-        // let firstChar = empresa.substring(0, 1)
-
+        // let firstChar = empresa.substr(0, 1); // Deprecated - This feature is no longer recommended
+        // let firstChar = empresa.substring(0, 1);
+        // let firstChar = empresa.slice(0, 1);
 
         // let firstChar = empresa.charAt(-1); // ""
         // let firstChar = empresa.charAt(30); // ""
@@ -41,6 +129,10 @@
         // let nextToLastChar = empresa.at(-2); // "n"
         // let firstChar = empresa.at(30); // undefined
         // let lastChar = empresa.charAt(empresa.length - 1);
+
+        // console.log(firstChar);
+
+        // let nome = "Pedro Remoaldo";
 
 
          let nome = "Pedro Remoaldo";
