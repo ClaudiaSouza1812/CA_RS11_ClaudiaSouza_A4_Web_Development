@@ -85,3 +85,32 @@ console.log(numero01); // 12
 console.log(numero02.toString()); // 12
 console.log(typeof numero02); // object
 
+// Math library/namespace
+
+console.log(Math.PI); // 3.141592653589793
+console.log(Math.pow(2, 3)); // 8
+console.log(2 ** 3);
+
+let maximo01 = Math.max(4, 3, 10, 234, -4, 56) // 234
+console.log(maximo01);
+
+let minimo01 = Math.min(4, 3, 10, 234, -4, 56) // -4
+console.log(minimo01);
+
+let valorArredondar = Math.PI;
+console.log(valorArredondar); // 3.141592653589793
+let arredondarParaCima = Math.ceil(valorArredondar);
+console.log(arredondarParaCima); // 4
+let arredondarParaBaixo = Math.floor(valorArredondar);
+console.log(arredondarParaBaixo); // 3
+let arredondarMatematicamente = Math.round(valorArredondar); 
+console.log(arredondarMatematicamente);
+
+let randomNumber = Math.random();
+console.log(randomNumber); // random number between 0 and 1 (1 not included)
+
+let randomNumberIntegerRange01 = Math.floor(Math.random() * 10);
+console.log(randomNumberIntegerRange01); // random integer between 1 and 10 (10 not included)
+
+let randomNumberIntegerRange02 = Math.floor(Math.random() * 10 + 1);
+console.log(randomNumberIntegerRange02); // random integer between 1 and 10 (10 included)
