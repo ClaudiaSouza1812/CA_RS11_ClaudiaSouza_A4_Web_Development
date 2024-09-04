@@ -161,30 +161,90 @@
 
          let spacePosition = name.lastIndexOf(" ");
          let ultimoNome4 = name.slice(spacePosition + 1);
+         console.log(ultimoNome4);
 
          let ultimoNome5 = name.slice(name.lastIndexOf(" ") + 1);
 
-         // determine if a name contains a specific character
+         console.log(ultimoNome5);
 
-         let characterPosition01 = nome.indexOf("e");
-         console.log(characterPosition01); // 1
-         let characterPosition02 = nome.indexOf("i");
+        // determinar se um nome possui um caracter (ou caracteres) específico
+        let posE = nome.indexOf("e");
+        console.log(posE); // 1
+        let posI = nome.indexOf("i");
+        console.log(posI); // -1 
+        let posDro = nome.indexOf("dro");
+        console.log(posDro); // 2
 
-         let newName = "";
+        let incluiE2 = nome.includes("e");
+        console.log(incluiE2); // true
+        let incluiI2 = nome.includes("i"); // false
+        console.log(incluiI2); // false
+        let incluiDro = nome.includes("dro");
+        console.log(incluiDro); // true
 
-         for (let pos = 0; pos < nome.length; pos++) {
-            if (nome[pos] === "e") {
-                newName += "i";
-            } else {
-                newName += nome[pos];
-            }
-         }
-        
-         console.log(newName);
+        console.log(nome.startsWith("P")); // true
+        console.log(nome.at(0) === "P"); // true
+        console.log(nome.at(0) === "p"); // false
+        // para apanhar minúsculas e maiúsculas
+        console.log(nome.at(0).toLowerCase() === "p"); // true
+        console.log(nome.toLowerCase().at(0) === "p"); // true
+        console.log(nome.startsWith("E")); // false
 
-         newName += (nome.at(pos) === "e" ? "i" : nome.at(pos)); 
+        console.log(nome.endsWith("o")); // true
+        console.log(nome.at(nome.length - 1) === "o"); // true
 
-         console.log(newName);
+        console.log(nome.search("e")); // 1
+
+        console.log(nome.split("").find(char => char.toUpperCase() === "R")); // r
+
+        // expressões regulares - regular expressions / regex
+        // validar um código postal
+        let cp = "1100-345";
+        // 4 algarismos seguidos de um hifen (-) seguidos de 3 algarismos
+        // let re = /[0123456789]/;
+        // let re = /[0-9][0-9][0-9][0-9]/;
+        /*
+        ^ - início de string
+        $ - fim de string
+        [] - caracteres que têm de existir
+        {} - número de ocorrências do(s) caracter(es) anteriores
+        */
+        let re = /^[0-9]{4}\-[0-9]{3}$/;
+        console.log(re.test(cp)); // true
+
+        // Só permitir letras e espaços numa string ou num campo de um formulário
+        // /^[a-zA-Z ]$/
+        // /^[a-zA-Z]|[à-ü]|[À-Ü]$/
+        // /^[a-zA-Z\u00C0-\u017F]$/
+
+        // validar matrículas portuguesas
+        // /^(([A-Z]{2}-\d{2}-(\d{2}|[A-Z]{2}))|(\d{2}-(\d{2}-[A-Z]{2}|[A-Z]{2}-\d{2})))$/
+
+        // \ - Escape character - tira o significado especial do caracter que vem a seguir
+        // let frase = "No Hamlet de Shakespeare, o príncipe diz "To be or not to be"";
+        // let frase = "No Hamlet de Shakespeare, o príncipe diz 'To be or not to be'";
+        let frase = "No Hamlet de Shakespeare, o príncipe diz \"To be or not to be\"";
+
+        console.log(frase);
+
+        // substituir todos os caracteres "e", na variável "nome", por caracteres "i"
+
+        let result = "";
+        for (let pos = 0; pos < nome.length; pos++) {
+            // if (nome.at(pos) === "e") {
+            //     result += "i";
+            // } else {
+            //     result += nome.at(pos);
+            // }
+            result += (nome.at(pos) === "e") ? "i" : nome.at(pos);
+        }
+        console.log(result);
+
+        // replaceAll - ES2021
+        console.log(nome.replaceAll("e", "i")); // Pidro Rimoaldo
+        console.log(nome.replace(/r/ig, "t")); // Pedto timoaldo
+        // g - global match
+        // i - case insensitive
 
     </script>
     
