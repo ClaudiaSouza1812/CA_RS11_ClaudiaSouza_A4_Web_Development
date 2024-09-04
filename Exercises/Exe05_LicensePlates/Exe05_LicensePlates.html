@@ -8,24 +8,27 @@
 <body>
     <script>
 
-        let platePatterns01 = ["AA-00-00", "AA-00-AA"];
-        let platePatterns02 = ["00-00-AA", "00-AA-00"];
+        // let platePatterns01 = ["AA-00-00", "AA-00-AA"];
+        // let platePatterns02 = ["00-00-AA", "00-AA-00"];
 
-        let plate = "56-BC-78";
+        let plate = "B1-78-DF";
 
         if (plate.charCodeAt(0) >= 65 && plate.charCodeAt(0) <= 90) {
             if (plate.charCodeAt(1) >= 65 && plate.charCodeAt(1) <= 90) {
-                for (let i = 0; i < 6; i++) {
+                for (let i = 2; i < 8; i++) {
                     if (i == 2 || i == 5) {
-                        if (plate[i] === "-" || plate[i] === " ") {
+                        if (plate[i] === "-" ) {
                             continue;
                         }
                         console.log(`Plate character /"${plate[i]}"/ invalid.`);
                         break;
                     }
-                    else if (i == 3 || i == 4) {
+                    else if (i == 3) {
                         if (plate.charCodeAt(i) >= 48 && plate.charCodeAt(i) <= 57) {
-                            continue;
+                            if (plate.charCodeAt(i + 1) >= 48 && plate.charCodeAt(i + 1) <= 57) {
+                                i = i + 1;
+                                continue;
+                            }
                         }
                         console.log(`Plate character /"${plate[i]}"/ invalid.`);
                         break;
@@ -33,15 +36,17 @@
                     else {
                         if (plate.charCodeAt(i) >= 65 && plate.charCodeAt(i) <= 90) {
                             if (plate.charCodeAt(i + 1) >= 65 && plate.charCodeAt(i + 1) <= 90) {
-                                console.log(`License plate ${plate} successfully validated`)
+                                i += 1;
+                                console.log(`License plate ${plate} successfully validated`);
                                 break;
                             }
                             console.log(`Plate character /"${plate[i]}"/ invalid.`);
                             break;
                         }
-                        else if (plate.charCodeAt(0) >= 48 && plate.charCodeAt(0) <= 57) {
-                            if (plate.charCodeAt(1) >= 48 && plate.charCodeAt(1) <= 57) {
-                                console.log(`License plate ${plate} successfully validated`)
+                        else if (plate.charCodeAt(i) >= 48 && plate.charCodeAt(i) <= 57) {
+                            if (plate.charCodeAt(i + 1) >= 48 && plate.charCodeAt(i + 1) <= 57) {
+                                i += 1;
+                                console.log(`License plate ${plate} successfully validated`);
                                 break;
                             }
                             console.log(`Plate character /"${plate[i]}"/ invalid.`);
@@ -54,10 +59,13 @@
                     }
                 }   
             }
+            else {
+                console.log("The second character must be a letter");
+            }
         }
         else if (plate.charCodeAt(0) >= 48 && plate.charCodeAt(0) <= 57) {
             if (plate.charCodeAt(1) >= 48 && plate.charCodeAt(1) <= 57) {
-                for (let i = 0; i < 6; i++) {
+                for (let i = 2; i < 8; i++) {
                     if (i == 2 || i == 5) {
                         if (plate[i] === "-" || plate[i] === " ") {
                             continue;
@@ -65,14 +73,39 @@
                         console.log(`Plate character /"${plate[i]}"/ invalid.`);
                         break;
                     }
+                    else {
+                        if (plate.charCodeAt(i) >= 65 && plate.charCodeAt(i) <= 90) {
+                            if (plate.charCodeAt(i + 1) >= 65 && plate.charCodeAt(i + 1) <= 90) {
+                                i += 1;
+                                continue;
+                            }
+                            console.log(`Plate character /"${plate[i]}"/ invalid.`);
+                            break;
+                        }
+                        else if (plate.charCodeAt(i) >= 48 && plate.charCodeAt(i) <= 57) {
+                            if (plate.charCodeAt(i + 1) >= 48 && plate.charCodeAt(i + 1) <= 57) {
+                                i += 1;
+                                continue;
+                            }
+                            console.log(`Plate character /"${plate[i]}"/ invalid.`);
+                            break;
+                        }
+                        else {
+                            console.log(`Plate character /"${plate[i]}"/ invalid.`);
+                            break;
+                        }
+                    }
                 }    
             }
-            
+            else {
+                console.log("The second character must be a number");
+            }
         }
         else {
-            console.log("The two first characters must be numbers");
+            console.log("The two first characters must be either letters or numbers");
         }
 
+        
 
     </script>
 </body>
