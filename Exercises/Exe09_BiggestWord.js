@@ -9,7 +9,7 @@ function biggestWord(sentence) {
     
     let biggestWordIndex = wordLenghts.indexOf(Math.max(...wordLenghts));
 
-    console.log(`"${words[biggestWordIndex]}"`, "-", wordLenghts[biggestWordIndex], "letras"); 
+    console.log(`"${words[biggestWordIndex]} - ${wordLenghts[biggestWordIndex]} letras"`); 
 }
 
 biggestWord("Exemplo de uma frase com palavras");
