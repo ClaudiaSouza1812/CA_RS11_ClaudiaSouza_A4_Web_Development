@@ -19,6 +19,18 @@ console.log(person02.property); // undefined
 console.log(person02[property]); 
 console.log(person02["nome"]);
 
+// shallow-iteration
+for (let property in person02) {
+    console.log(`${property} = ${person02[property]}`);
+}
+
+// destructing 
+[[key, value]] = Object.entries(person02);
+
+for (const [key, value] of Object.entries(person02)) {
+    console.log(`${key} = ${value}`);
+}
+
 function showInfo(person) {
     console.log(`${person.name} lives in ${person.city}.`);
 }
