@@ -1,3 +1,4 @@
+// using js methods
 function numberOfWords(sentence) {
     let words = sentence.split(" ");
     return words.length;
@@ -5,6 +6,7 @@ function numberOfWords(sentence) {
 
 console.log(numberOfWords("Example of a sentence with words"));
 
+// without using js methods
 function numberOfWords02(sentence) {
     
     let numberOfWords = 1;

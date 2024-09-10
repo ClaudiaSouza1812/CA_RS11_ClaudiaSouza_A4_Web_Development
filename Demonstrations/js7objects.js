@@ -13,6 +13,12 @@ let person02 = {
 };
 console.log(person02.name);
 
+let property = "nome";
+console.log(person02.property); // undefined
+// will return the object name, because the variable value its equal to the one of the objects property, in this case, the property 'name';
+console.log(person02[property]); 
+console.log(person02["nome"]);
+
 function showInfo(person) {
     console.log(`${person.name} lives in ${person.city}.`);
 }

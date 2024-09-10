@@ -1,3 +1,5 @@
+// Exe 11 without using Set()
+
 let numbers = [12,6,3,12,8,6,5];
 
 for (let i = 0, j = i + 1; i < numbers.length - 1; j++) {
