@@ -10,4 +10,4 @@ for (let i = 0, j = i + 1; i < numbers.length - 1; j++) {
     }
 }
 
-console.log(numbers); // [12, 6, 3, 8, 5]
+console.log(numbers);
