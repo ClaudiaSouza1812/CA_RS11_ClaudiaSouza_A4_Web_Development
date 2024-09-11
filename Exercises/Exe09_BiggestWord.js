@@ -1,6 +1,6 @@
 
 function biggestWord(sentence) {
-    let words = sentence.split(" ");
+    let words = sentence.replace(/[.,-_?!]/g, "").trip().split(" ");
     let wordLengths = [];
 
     words.forEach(word => {
