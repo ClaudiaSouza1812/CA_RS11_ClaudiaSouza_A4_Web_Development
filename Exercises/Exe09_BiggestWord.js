@@ -1,15 +1,20 @@
 
 function biggestWord(sentence) {
     let words = sentence.split(" ");
-    let wordLenghts = [];
+    let wordLengths = [];
 
     words.forEach(word => {
-        wordLenghts.push(word.length);
+        wordLengths.push(word.length);
     });
     
-    let biggestWordIndex = wordLenghts.indexOf(Math.max(...wordLenghts));
+    let biggestWordIndex = wordLengths.indexOf(Math.max(...wordLengths));
 
     console.log(`"${words[biggestWordIndex]} - ${wordLenghts[biggestWordIndex]} letras"`); 
 }
 
 biggestWord("Exemplo de uma frase com palavras");
+
+///replace(/[.,_-?!]/g, " ");
+
+// ver problema de existir mais de uma palavra com o número maior de caracteres
+
