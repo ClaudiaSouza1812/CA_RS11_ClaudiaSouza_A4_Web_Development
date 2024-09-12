@@ -17,7 +17,24 @@ biggestWordOne("Exemplo de uma frase com palavras");
 ///replace(/[.,_-?!]/g, " ");
 
 // ver problema de existir mais de uma palavra com o número maior de caracteres
+// my version
+function biggestWordTwo(sentence) {
+    sentence = sentence.trim().replace(/[^a-zA-Z\s]/g, "").split(" ");
+    let biggestWords = [], wordLengths = [], numberOfLetters = 0;
 
+    sentence.forEach(word => wordLengths.push(word.length));
+    numberOfLetters = Math.max(...wordLengths);
+    sentence.forEach(word => {
+        if (word.length === numberOfLetters) {
+            biggestWords.push(word);
+        }
+    })
+    console.log(`The biggest word(s) is(are): "${biggestWords.join(" - ")}", with ${numberOfLetters} letters.`);
+;}
+
+biggestWordTwo(" Exemplos- de. frases, com_ #palavras! $ ");
+
+// improved version
 function biggestWordTwo(sentence) {
     sentence = sentence.trim().replace(/[^a-zA-Z\s]/g, "").split(/\s+/);
     let biggestWords = [], numberOfLetters = 0;

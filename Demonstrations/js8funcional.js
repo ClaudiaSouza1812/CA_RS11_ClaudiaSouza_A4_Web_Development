@@ -7,6 +7,7 @@ let tempMinima = Infinity;
 let tempMaxima = -Infinity;
 let sum = 0;
 for (let temperature of temperatures) {
+    //debugger;
     if (temperature > tempMaxima) {
         tempMaxima = temperature;
     }
