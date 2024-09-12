@@ -51,3 +51,29 @@ function maiorPalavra(texto) {
 maiorPalavra("Exemplo de uma frase com palavras");
 
 // ver problema de existir mais de uma palavra com o número maior de caracteres
+
+function maiorPalavra2(frase) {
+    let lengthPalavraMaior = 0;
+    let palavrasMaiorArray = [];
+    let palavrasArray = frase.split(" ");
+
+    for (let i = 0; i < palavrasArray.length; i++) {
+        if (palavrasArray[i].length > lengthPalavraMaior) {
+            lengthPalavraMaior = palavrasArray[i].length;
+            palavrasMaiorArray = [palavrasArray[i]];
+
+        } else if (palavrasArray[i].length === lengthPalavraMaior) {
+            palavrasMaiorArray.push(palavrasArray[i]);
+        }
+    }
+
+    return console.log(`"${palavrasMaiorArray}" - ${lengthPalavraMaior} letras`);
+}
+
+maiorPalavra2("Exemplo de uma frase com palavras"); // "palavras" - 8 letras
+// maiorPalavra2("Exemplo de uma frase peculiar com palavras"); // "peculiar,palavras" - 8 letras
+
+// Exercicio 9b
+// Outro exercício possível é remover todos os símbolos (de pontuação) da string (.,-, etc.) antes de identificar a maior palavra.
+
+texto = texto.replace(/[.,!?]/g, '');
