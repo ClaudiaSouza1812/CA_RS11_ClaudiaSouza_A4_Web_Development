@@ -7,12 +7,15 @@
   "description": "Project Re_Start",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "keywords": [
     "javascript",
     "node"
   ],
   "author": "Claudia Souza",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^2.1.1"
+  }
 }
