@@ -32,3 +32,24 @@ let theParagraph = document.querySelector(".paragraphs");
 // theParagraph.className = "emphasis";
 // theParagraph.className += " emphasis";
 theParagraph.classList.add("emphasis");
+
+// events
+// event handler - callback
+document.querySelector("#bt01").onclick = function () {
+    //console.log("clicked");
+    theParagraph.style.color = "red";
+    // change the an HTML element attribute
+    // document.querySelector("#bt01").disabled = true;
+    // document.querySelector("#bt01").setAttribute("disabled", true);
+    // this references the element in which the event was triggered
+    this.setAttribute("disabled", true);
+}
+
+function changeBackgroundColor() {
+    this.style.backgroundColor = "gray";
+}
+
+// event listener - callback
+//theParagraph.addEventListener("click", function() {// comands});
+// call the function without the () to it be trigged only when the event occurs 
+theParagraph.addEventListener("click", changeBackgroundColor);

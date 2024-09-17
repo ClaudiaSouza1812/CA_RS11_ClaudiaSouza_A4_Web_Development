@@ -1,0 +1,1 @@
+// try to do everything possible with HTML, after that, everything possible woth CSS, and, only after that, use javascript
