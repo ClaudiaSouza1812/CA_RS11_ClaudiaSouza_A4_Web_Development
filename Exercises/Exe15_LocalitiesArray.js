@@ -1,11 +1,10 @@
 // First Aproach
 // Function declaration
-function CheckLocality01(pessoa) {
+function checkLocalityUsingInclude(pessoa) {
     if (!localidades01.includes(pessoa.localidade)) {
         localidades01.push(pessoa.localidade);
     }
 }
-
 
 // Data set
 let pessoas = [
@@ -19,7 +18,7 @@ let pessoas = [
 
 // Processing 
 let localidades01 = [];
-pessoas.forEach(CheckLocality01); 
+pessoas.forEach(pessoa => checkLocalityUsingInclude(pessoa)); 
 
 // Output
 console.log(localidades01.sort());
@@ -33,3 +32,10 @@ pessoas.forEach(pessoa => {
 });
 
 console.log(localidades02.sort());
+
+function checkLocalityUsingSet(pessoas) {
+    let uniqueLocalities = new Set(pessoas.map(pessoa => pessoa.localidade));
+    return uniqueLocalities;
+}
+
+console.log(checkLocalityUsingSet());

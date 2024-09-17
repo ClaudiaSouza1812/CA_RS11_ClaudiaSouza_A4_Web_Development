@@ -1,3 +1,4 @@
+//Exe17
 function isValidString01(sentence) {
     sentence = sentence.trim();
     for (let i = 0; i < sentence.length; i++) {
