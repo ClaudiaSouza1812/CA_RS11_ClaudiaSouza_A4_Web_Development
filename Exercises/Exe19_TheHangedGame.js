@@ -1,23 +1,23 @@
 words = [
     // 5 letters
-    "apple", "beach", "cloud", "dance", "eagle",
+    "apple", "beach", "cloud", "dance", "eagle", "flame", "grape", "horse", "ivory", "juice",
     // 6 letters
-    "flower", "garden", "harbor", "island", "jungle",
+    "flower", "garden", "harbor", "island", "jungle", "knight", "lemon", "mirror", "orange", "purple",
     // 7 letters
-    "kitchen", "lantern", "mystery", "network", "octopus",
+    "kitchen", "lantern", "mystery", "network", "octopus", "penguin", "quasar", "rainbow", "silence", "tornado",
     // 8 letters
-    "paradise", "question", "rainbow", "sunshine", "treasure",
+    "paradise", "question", "rainbow", "sunshine", "treasure", "umbrella", "volcano", "whisper", "xylophone", "zephyr",
     // 9 letters
-    "adventure", "butterfly", "chocolate", "discovery", "elephants",
+    "adventure", "butterfly", "chocolate", "discovery", "elephants", "fireflies", "grapefruit", "harmonica", "invisible", "juggernaut",
     // 10 letters
-    "friendship", "generation", "helicopter", "innovation", "journalism",
+    "friendship", "generation", "helicopter", "innovation", "journalism", "kaleidoscope", "lighthouse", "moonstone", "nightingale", "obsidian",
     // 11 letters
-    "kaleidoscope", "lighthouse", "magnificent", "negotiation", "opportunity",
+    "kaleidoscope", "lighthouse", "magnificent", "negotiation", "opportunity", "perseverance", "quixotic", "rhapsody", "serendipity", "tantalizing",
     // 12 letters
-    "photography", "quarterback", "reservation", "subscription", "temperature"
+    "photography", "quarterback", "reservation", "subscription", "temperature", "adventurous", "bittersweet", "constellation", "delightfully", "effervescent"
 ];
 
-let choosedWord = words[Math.floor(Math.random() * 40)];
+let choosedWord = words[Math.floor(Math.random() * 80)];
 
 function setAttempts(word) {
     let attempts = 0;
@@ -32,8 +32,7 @@ function setAttempts(word) {
 }
 
 function capitalizeFirstLetter(word) {
-    word[0] = word[0].toUpperCase();
-    return word;
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
 
 function getPlayerLetter() {
@@ -44,11 +43,11 @@ function getPlayerLetter() {
     return playerLetter;
 }
 
-function checkPlayerLetter(playerLetter) {
+function checkPlayerLetter(choosedWord, playerLetter) {
     return choosedWord.includes(playerLetter);
 }
 
-function decryptWord(maskedWord, playerLetter) {
+function decryptWord(choosedWord, maskedWord, playerLetter) {
     maskedWord = choosedWord.map(letter => letter === playerLetter ? letter : maskedWord[choosedWord.indexOf(letter)]);
     if (maskedWord[0].charCodeAt(0) >= 97 && maskedWord[0].charCodeAt(0) <= 122) {
         maskedWord = capitalizeFirstLetter(maskedWord);
@@ -70,21 +69,22 @@ function runHangedGame(word) {
         if (maskedWord.includes("_")) {
             let playerLetter = getPlayerLetter();
 
-            if (checkPlayerLetter(playerLetter)) {
-                maskedWord = decryptWord(maskedWord, playerLetter);
+            if (checkPlayerLetter(choosedWord, playerLetter)) {
+                maskedWord = decryptWord(choosedWord, maskedWord, playerLetter);
                 console.log(maskedWord.join(" "));
             } else {
                 attempts -= 1;
                 console.log(`The letter "${playerLetter}" is not in the word. Attempts left: (${attempts}).`);
-                console.log(maskedWord.join(" "));
+                if (attempts === 0) {
+                    console.log(`The word was "${capitalizeFirstLetter(word)}", better luck next time!`);
+                } else {
+                    console.log(maskedWord.join(" "));
+                }
             }
         } else {
             alreadyWon = true;
-            console.log(`The word is "${maskedWord}", congrats, you won!!!`);
+            console.log(`The word is "${maskedWord.join("")}", congrats, you won!!!`);
         }
-    }
-    if (attempts === 0) {
-    console.log(`The word was "${capitalizeFirstLetter(word)}", better luck next time!`);
     }
 }
 
