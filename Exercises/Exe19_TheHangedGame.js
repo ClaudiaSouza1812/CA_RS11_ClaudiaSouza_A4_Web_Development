@@ -32,7 +32,8 @@ function setAttempts(word) {
 }
 
 function capitalizeFirstLetter(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    word[0] = word[0].toUpperCase();
+    return word;
 }
 
 function getPlayerLetter() {
@@ -76,14 +77,14 @@ function runHangedGame(word) {
                 attempts -= 1;
                 console.log(`The letter "${playerLetter}" is not in the word. Attempts left: (${attempts}).`);
                 if (attempts === 0) {
-                    console.log(`The word was "${capitalizeFirstLetter(word)}", better luck next time!`);
+                    alert("Game over. You didn't get the word right.");
                 } else {
                     console.log(maskedWord.join(" "));
                 }
             }
         } else {
             alreadyWon = true;
-            console.log(`The word is "${maskedWord.join("")}", congrats, you won!!!`);
+            alert("Congratulations. You got the word right.");
         }
     }
 }
