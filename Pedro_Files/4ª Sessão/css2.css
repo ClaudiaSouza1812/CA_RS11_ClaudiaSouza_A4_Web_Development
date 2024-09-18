@@ -1,0 +1,103 @@
+/* 
+
+Unidades
+
+Absolutas
+    px - pixéis
+    pt - points (impressora/papel)
+    cm - centímetros
+    mm - milimetros
+    in - inches/polegadas
+    pc - picas
+
+Relativas
+    % - percentagem
+    em 
+    rem - root em
+    ex - x-height
+
+    vw - viewport width (100vw = 100% largura)
+    vh - viewport height
+    vmin
+    vmax
+    ch - tamanho do caracter 0
+
+*/
+
+#container {
+    font-size: 2em;
+}
+
+#exemplo {
+    /* width: 50%; */
+    width: 500px;
+    /* 1em = 100% = 16px */
+    /* 2em = 2x16px = 32px */
+    /* font-size: 2em; */
+    /* font-size: 200%; */
+
+    /* 2rem = 16px x2 = 32px */
+    font-size: 2rem;
+
+}
+
+/* 
+
+Cores
+
+Named colors
+    16 cores originais - fuchsia
+    Actualmente temos nomes para 147 cores
+        khaki
+        chartreuse
+
+Hexadecimal colors
+    #RRGGBB ou #rrggbb
+    0-9abcdef
+    #23a5ef
+    #000/#000000 - black
+    #fff - white
+    #ccc - lightgrey
+    #f00 - red
+    #ff0 - yellow
+    #RGB ou #RGB
+    #33ee66 é igual a #3e6
+
+RGB colors
+    0-255
+    rgb(255,255,0) - yellow
+    rgb(23,56,234)
+    rgb(50%,25%,67%)
+
+hsl()
+    hue, saturation, and lightness
+    hsl(150deg 30% 60%);
+
+Transparência/opacidade
+    cor - transparent
+    propriedade opacity
+    opacity: 0; - transparente
+    opacity: 1; - opaco
+
+    transparência varia entre 0 e 1 e, incrementos de 0.05
+    rgba(23,56,234,0.55) - cor com transparência
+    hsla(150deg 30% 60% 0.55)
+    #RRGGBBAA ou #rrggbbaa
+    #23efc634
+
+*/
+
+#exemplo {
+    /* color: blue; */
+    /* color: chartreuse; */
+    /* color: #23a5ef; */
+    /* color: #ff0; */
+    /* color: rgb(255, 255, 0); */
+    /* color: rgb(50%, 25%, 67%); */
+    /* color: hsl(150deg 30% 60%); */
+    /* color: transparent; */
+    /* opacity: 0; */
+    /* color: rgba(23, 56, 234, 0.55); */
+    color: #23efc6;
+    color: #23efc634;
+}

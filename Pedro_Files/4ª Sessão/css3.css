@@ -1,0 +1,104 @@
+/* 
+CSS Box Model
+
+Propriedades:
+
+width - largura
+height - altura
+padding - espaço entre o conteúdo do elemento e a border
+border - moldura à volta do elemento HTML
+margin - espaço entre o elementos e os outros elementos adjacentes
+
+outline - border para além da border (à volta da border)
+overflow - define o que acontece a conteúdo que extravasa os limites do elemento
+
+*/
+
+p {
+    width: 500px;
+    /* height: 25px; */
+    /* shorthand property */
+    /* border: 1px solid #000; */
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: #000; */
+    border: 3px double #000;
+    /* border-left: 3px double #000; */
+    /* border-left-color: #000; */
+    /* padding: 10px; */
+    /* 10px - top/bottom e 20px - left/right */
+    /* padding: 10px 20px; */
+    /* padding-left: 20px; */
+    /* padding: top right bottom left */
+    padding: 5px 10px 20px 30px;
+    margin: 0;
+    display: inline-block;
+}
+
+#especial {
+    height: 75px;
+    /* overflow: hidden; */
+    /* overflow: scroll; */
+    overflow: auto;
+}
+
+a {
+    /* por omissão, um link tem display: inline; */
+    /* display: block; */
+    /* color: yellow; */
+}
+
+/* :link - pseudo-classe */
+a:link {
+    /* color: green; */
+    /* text-decoration: none; */
+}
+
+a:visited {
+    /* color: red; */
+}
+
+a:hover {
+    /* text-decoration: underline;
+    font-weight: bold; */
+}
+
+a:active {
+    /* outline: 3px solid #f0f;
+    font-size: 3rem; */
+}
+
+/* focus é utilizado principalmente por razões de acessibilidade */
+a:focus {
+    /* border: 1px dotted #000;
+    background-color: cyan; */
+}
+
+/* > - child selector */
+#topMenu>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+/* espaço - descendant selector */
+#topMenu li {
+    display: inline;
+}
+
+/* alternativa */
+/* #topMenu>ul>li {} */
+
+#topMenu a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+
+#topMenu a:hover {
+    background-color: red;
+    color: white;
+}
