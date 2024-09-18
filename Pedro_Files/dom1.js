@@ -29,7 +29,7 @@ let elParagrafo = document.querySelector('.paragrafos');
 // elParagrafo.style.fontWeight = "bold";
 
 // aplicar uma classe ao elemento
-// elParagrafo.className = "destaque";
+// elParagrafo.className = "destaqu";
 // elParagrafo.className += " destaque";
 elParagrafo.classList.add("destaque");
 

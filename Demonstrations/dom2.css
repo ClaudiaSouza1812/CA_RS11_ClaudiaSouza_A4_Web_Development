@@ -1,0 +1,14 @@
+#bt01 {
+    margin: 0;
+}
+
+section:first-of-type {
+    border: 1px solid black;
+    padding: 20px;
+    width: 400px;
+    /* display: block; */
+}
+
+.hide {
+    display: none;
+}

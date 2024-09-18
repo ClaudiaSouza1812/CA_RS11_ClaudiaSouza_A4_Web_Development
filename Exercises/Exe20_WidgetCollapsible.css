@@ -5,3 +5,9 @@
     border-radius: 5px;
     height: 35px;
 }
+#bt01content {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
