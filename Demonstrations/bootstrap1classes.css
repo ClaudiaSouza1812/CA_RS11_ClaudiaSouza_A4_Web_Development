@@ -1,0 +1,14 @@
+.tabeladados {
+    width: 500px;
+}
+.btn {
+    border-radius: 0;
+}
+.btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+.btn-outline-primary {
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
