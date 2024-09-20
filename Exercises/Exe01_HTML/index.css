@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: fantasy;
+}
+header {
+    text-align: center;
+}
+#flexBoxOne {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#flexBoxOne > section{
+    border: 1px solid darkgray;
+    width: calc(100% / 3);
+    text-align: center;
+    border-bottom: 2px solid darkgray;
+    background-color: whitesmoke; 
+}
+ul {
+    width: 150px;
+    text-align: center;
+    background-color: whitesmoke;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul > li {
+    border: 0.5px solid darkgray;
+}
+img {
+    position: relative;
+    width: 100%;
+}
+a {
+    color: green;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+a:visited {
+    color: cornflowerblue;
+}
