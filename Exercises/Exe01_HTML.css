@@ -1,7 +1,23 @@
-section {
-    border-bottom: 2px solid darkgray;
+body {
+    margin: 0;
+    padding: 10px;
 }
-
+header {
+    text-align: center;
+}
+#blockOne {
+    display: flex;
+    border: 2px solid darkgray;
+    background-color: whitesmoke;
+}
+#blockOne > section{
+    width: calc(100% / 3);
+    text-align: center;
+}
+img {
+    position: relative;
+    width: 100%;
+}
 a {
     color: green;
     background-color: transparent;
