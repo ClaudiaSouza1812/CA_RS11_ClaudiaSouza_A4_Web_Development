@@ -2,9 +2,11 @@ body {
     margin: 0;
     padding: 10px;
     font-family: fantasy;
+    background-color: black
 }
 header {
     text-align: center;
+    color: whitesmoke;
 }
 #flexBoxOne {
     display: flex;
@@ -13,33 +15,33 @@ header {
     align-items: center;
 }
 #flexBoxOne > section{
-    border: 1px solid darkgray;
-    width: calc(100% / 3);
+    border: 2px solid black;
     text-align: center;
-    border-bottom: 2px solid darkgray;
     background-color: whitesmoke; 
 }
 ul {
-    width: 150px;
-    text-align: center;
-    background-color: whitesmoke;
+    width: relative;
+    background-color: black;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-ul > li {
-    border: 0.5px solid darkgray;
-}
 img {
     position: relative;
     width: 100%;
+    border-bottom: 1px solid black;
 }
 a {
-    color: green;
-    text-decoration: none;
+    color: whitesmoke;
+    text-decoration:none;
     font-size: 24px;
     font-weight: bold;
 }
 a:visited {
-    color: cornflowerblue;
+    color: lightgray;
+}
+a p {
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
 }

@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: fantasy;
+    background-color: black;
+}
+header {
+    text-align: center;
+    color: whitesmoke;
+}
+#flexBoxOne {
+    display: flex;
+}
+#flexBoxOne > section{
+    border: 1px solid black;
+    width: calc(100% / 2);
+    text-align: center;
+    background-color: whitesmoke; 
+}
+
+img {
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    padding: 10px;
+    text-align: justify;
+}
