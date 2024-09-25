@@ -1,0 +1,16 @@
+{
+    "bookstore": [
+        {
+            "isbn": "1718503105",
+            "author": "Steve Klabnik",
+            "title": "The Rust Programming Language, 2nd Edition",
+            "publisher": "No Starch Press"
+        },
+        {
+            "isbn": "1492052590",
+            "author": "Jim Blandy",
+            "title": "Programming Rust: Fast, Safe Systems Development",
+            "publisher": "O'Reilly"
+        }
+    ]
+}

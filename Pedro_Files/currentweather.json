@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": -8.5271,
+        "lat": 41.2274
+    },
+    "weather": [
+        {
+            "id": 800,
+            "main": "Clear",
+            "description": "clear sky",
+            "icon": "01d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 295.12,
+        "feels_like": 295.51,
+        "temp_min": 290.68,
+        "temp_max": 298.36,
+        "pressure": 1012,
+        "humidity": 82
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.03,
+        "deg": 0
+    },
+    "clouds": {
+        "all": 0
+    },
+    "dt": 1719214538,
+    "sys": {
+        "type": 2,
+        "id": 2009460,
+        "country": "PT",
+        "sunrise": 1719205330,
+        "sunset": 1719259855
+    },
+    "timezone": 3600,
+    "id": 2743095,
+    "name": "Alfena",
+    "cod": 200
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<bookstore>
+    <book isbn="1718503105">
+        <author>Steve Klabnik</author>
+        <title>The Rust Programming Language, 2nd Edition</title>
+        <publisher>No Starch Press</publisher>
+    </book>
+    <book isbn="1492052590">
+        <author>Jim Blandy</author>
+        <title>Programming Rust: Fast, Safe Systems Development</title>
+        <publisher>O'Reilly</publisher>
+    </book>
+</bookstore>
