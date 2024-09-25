@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ajax2fetch.css">
+    <title>Fetch</title>
+</head>
+<body>
+    <h2>Series Management</h2>
+    <form id="formRegistoSeries">
+        <p><label for="title">Title:</label> <input type="text" id="title"></p>
+        <p><label for="year">Year:</label> <input type="text" id="year"></p>
+        <p><input type="button" id="btInsert" value="Criar registo"></p>
+    </form>
+    <table class="tabelaDados">
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>year</th>
+                <th>operations</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total of posts: <span id="totalSeries"></span></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="ajax3jsonserver.js"></script>
+</body>
+</html>
