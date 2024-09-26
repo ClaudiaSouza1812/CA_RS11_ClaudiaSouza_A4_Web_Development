@@ -24,7 +24,7 @@ function deleteSerie(id) {
 function showData(series) {
     let content = "";
     for (let serie of series) {
-        content += "<tr>";
+        content += `<tr data-id=${serie.id}>`;
         content += `<td>${serie.title}</td>`;
         content += `<td>${serie.year}</td>`;
         content += `<td><button class="btDelete" data-id=${serie.id}>X</td>`;
@@ -41,58 +41,75 @@ function showData(series) {
             deleteSerie(idToDelete);
         })
     }
+    let linhas = document.querySelectorAll(".tabelaDados > tbody > tr");
+    for (let linha of linhas) {
+        linha.addEventListener("click", function () {
+            let id = this.getAttribute("data-id");
+            window.location.href = `ajax3detail.html?id=${id}`;
+        })
+    }
 }
 
+// GET
+// fetch(url, {method: "GET"})
 function readData() {
-    // GET
-    // fetch(url, {method: "GET"})
     fetch(url)
-        .then(response => {
-            if (response.ok) {
-                return response.json();
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            if (response.status === 404) {
+                return Promise.reject("URL does not exist!");
             } else {
-                if (response.status === 404) {
-                    return Promise.reject("URL does not exist!");
-                } else {
-                    return Promise.reject("Unknown error!");
-                }
+                return Promise.reject("Unknown error!");
             }
-        })
-        .then(series => {
-            showData(series);
-        })
-        .catch(error => console.log(error));
-
+        }
+    })
+    .then(series => {
+        showData(series);
+    })
+    .catch(error => console.log(error));
 }
 readData();
 
+const ftitle = document.querySelector("#title");
+const fyear = document.querySelector("#year");
+
 document.querySelector("#btInsert").addEventListener("click", function () {
     console.log("Clicou");
-    let ftitle = document.querySelector("#title").value;
-    let fyear = document.querySelector("#year").value;
-    let newRegister = {
-        title: ftitle.value,
-        year: fyear.value
+    
+    if (ftitle.value !== "" && fyear.value !== "") {
+        let newRegister = {
+            title: ftitle.value,
+            year: fyear.value
+        }
+        insertSerie(newRegister);
+    } else {
+        alert("Fields with mandatory data!")
     }
-    // POST
-    // Methods Chaining, one method receive the return of the other, in this algorithm, .them receive the result of the previous method as a parameter  
-    fetch(url, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(newRegister)})
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                if (response.status === 404) {
-                    return Promise.reject("URL does not exist!");
-                } else {
-                    return Promise.reject("Unknown error!");
-                }
-            }
-        })
-        .then(series => {
-            console.log(series);
-            ftitle.value = "";
-            fyear.value = "";
-            readData();
-        })
-        .catch(error => console.log(error));
 });
+
+// POST
+// Methods Chaining, one method receive the return of the other, in this algorithm, .them receive the result of the previous method as a parameter  
+function insertSerie(newRegister) {
+    fetch(url, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(newRegister)})
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            if (response.status === 404) {
+                return Promise.reject("URL does not exist!");
+            } else {
+                return Promise.reject("Unknown error!");
+            }
+        }
+    })
+    .then(series => {
+        console.log(series);
+        ftitle.value = "";
+        fyear.value = "";
+        readData();
+    })
+    .catch(error => console.log(error));
+}
+    

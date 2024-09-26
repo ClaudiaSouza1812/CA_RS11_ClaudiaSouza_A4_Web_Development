@@ -1,0 +1,19 @@
+{
+    "series": [
+        {
+            "id": 1,
+            "title": "Friends",
+            "year": "2000"
+        },
+        {
+            "id": 2,
+            "title": "Lost",
+            "year": "2010"
+        },
+        {
+            "id": 3,
+            "title": "Dexter",
+            "year": "2012"
+        }
+    ]
+}
