@@ -1,5 +1,7 @@
 const url = "http://localhost:3000/series";
 const tableBody = document.querySelector(".tabelaDados > tbody");
+const ftitle = document.querySelector("#title");
+const fyear = document.querySelector("#year");
 
 function deleteSeries(id) {
     // http://localhost:3000/series/6
@@ -26,10 +28,12 @@ function deleteSeries(id) {
 function mostraDados(series) {
     let content = "";
     for (let serie of series) {
-        content += '<tr>';
+        content += `<tr data-id="${serie.id}">`;
         content += `<td>${serie.title}</td>`;
         content += `<td>${serie.year}</td>`;
-        content += `<td><button class="btDelete" data-id="${serie.id}">X</button></td>`;
+        // content += `<td><button class="btDelete" data-id="${serie.id}">X</button></td>`;
+        // content += `<td><button class="btDelete" data-id="${serie.id}">&#9249;</button></td>`;
+        content += `<td><i class="fa-regular fa-trash-can btDelete" data-id="${serie.id}"></i></td>`;
         content += '</tr>';
     }
     tableBody.innerHTML = content;
@@ -37,10 +41,22 @@ function mostraDados(series) {
 
     let botoes = document.querySelectorAll(".tabelaDados > tbody .btDelete");
     for (let botao of botoes) {
-        botao.addEventListener("click", function () {
+        botao.addEventListener("click", function (e) {
+            // e, evt, event - referencia o objecto event
+            // stopPropagation evita o event bubbling
+            e.stopPropagation();
             let idToDelete = this.getAttribute("data-id");
             console.log(idToDelete);
             deleteSeries(idToDelete);
+        })
+    }
+
+    let linhas = document.querySelectorAll(".tabelaDados > tbody > tr");
+    for (let linha of linhas) {
+        linha.addEventListener("click", function () {
+            let id=this.getAttribute("data-id");
+            // utilizar a querystring
+            window.location.href=`ajax3detail.html?id=${id}`;
         })
     }
 }
@@ -61,6 +77,11 @@ function lerDados() {
             }
         })
         .then(series => {
+            if (localStorage.getItem("series")===null) {
+                localStorage.setItem("series", JSON.stringify(series));
+                // para extrair
+                // JSON.parse(localStorage.getItem("series"))
+            }
             mostraDados(series);
         })
         .catch(error => console.log(error));
@@ -69,12 +90,18 @@ function lerDados() {
 lerDados();
 
 document.querySelector("#btInsere").addEventListener("click", function () {
-    let ftitle = document.querySelector("#title");
-    let fyear = document.querySelector("#year");
-    let novoRegisto = {
-        title: ftitle.value,
-        year: fyear.value
+    if (ftitle.value!=="" && fyear.value!=="") {
+        let novoRegisto = {
+            title: ftitle.value,
+            year: fyear.value
+        }
+        insertSeries(novoRegisto);
+    } else {
+        alert("Todos os campos são de preenchimento obrigatório!")
     }
+});
+
+function insertSeries(novoRegisto) {
     // POST
     fetch(url, {
         method: "POST",
@@ -102,12 +129,7 @@ document.querySelector("#btInsere").addEventListener("click", function () {
         })
         .catch(error => console.log(error));
 
-});
+}
 
-// let linhas = document.querySelectorAll(".tabelaDados > tbody > tr");
-// for (let linha of linhas) {
-//     linha.addEventListener("click", function () {
-//         console.log("clicou");
-//     })
-// }
+
 

@@ -12,7 +12,7 @@ function deleteSerie(id) {
                     return Promise.reject("URL does not exist!");
                 } else {
                     return Promise.reject("Unknown error!");
-                }
+              U  }
             }
         })
         .then(resultado => {
@@ -27,15 +27,20 @@ function showData(series) {
         content += `<tr data-id=${serie.id}>`;
         content += `<td>${serie.title}</td>`;
         content += `<td>${serie.year}</td>`;
-        content += `<td><button class="btDelete" data-id=${serie.id}>X</td>`;
-        content += "</tr>";
+        // content += `<td><button class="btDelete" data-id=${serie.id}>X</td>`;
+        // content += `<td><button class="btDelete" data-id=${serie.id}>&#9249</i></td>`;
+        content += `<td><i class="fa-solid fa-trash-can btDelete" data-id=${serie.id}></i></td>`;
+        content += `</tr>`;
     }
     tableBody.innerHTML = content;
     document.querySelector("#totalSeries").textContent = series.length;
 
     let button = document.querySelectorAll(".tabelaDados > tbody .btDelete");
     for (let bt of button) {
-        bt.addEventListener("click", function () {
+        bt.addEventListener("click", function (e) {
+            // e, evt, event:  represent the event
+            // stop propagation avoids event bubbling
+            e.stopPropagation();
             let idToDelete = this.getAttribute("data-id");
             console.log(idToDelete);
             deleteSerie(idToDelete);
@@ -66,6 +71,11 @@ function readData() {
         }
     })
     .then(series => {
+        if (localStorage.getItem("series") === null) {
+            localStorage.setItem("series", JSON.stringify(series));
+            // to extract
+            // JSON.parse(localStorage.getItem("series"))
+        };
         showData(series);
     })
     .catch(error => console.log(error));

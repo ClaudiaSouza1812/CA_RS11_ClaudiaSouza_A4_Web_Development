@@ -1,16 +1,6 @@
 {
   "series": [
     {
-      "id": 1,
-      "title": "Friends",
-      "year": "2000"
-    },
-    {
-      "id": 3,
-      "title": "Dexter",
-      "year": "2012"
-    },
-    {
       "title": "GOT",
       "year": "2014",
       "id": 4
@@ -19,6 +9,11 @@
       "title": "The Bear",
       "year": "2022",
       "id": 5
+    },
+    {
+      "title": "Friends",
+      "year": "2002",
+      "id": 6
     }
   ]
 }

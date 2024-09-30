@@ -3,11 +3,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
 #layoutComFloats {
     overflow: hidden;
 }
-
 #layoutComFloats>section {
     border: 1px solid #000;
     padding: 20px;
@@ -16,11 +14,9 @@ body {
     box-sizing: border-box;
     height: 200px;
 }
-
 #layoutInlineBlock {
     font-size: 0;
 }
-
 #layoutInlineBlock>section {
     border: 1px solid #000;
     padding: 20px;
