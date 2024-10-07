@@ -1,0 +1,36 @@
+:root {
+    --corFundo: pink;
+}
+.corComVariavel {
+    background-color: var(--corFundo);
+}
+
+#container > .outraclasse {
+    background-color: green;
+ }
+ #especial {
+    background-color: red;
+    letter-spacing: 1em;
+ }
+ .destaque {
+    background-color: blue !important;
+ }
+#container > p {
+    background-color: lightgrey;
+ }
+p {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* #container > p:first-of-type {
+    color: white;
+} */
+
+p.destaque {
+    font-style:italic;
+}
+
+.outraclasse.destaque {
+    color: white;
+}
